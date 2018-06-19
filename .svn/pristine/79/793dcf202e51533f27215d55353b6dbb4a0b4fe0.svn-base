@@ -1,0 +1,114 @@
+package com.payegis.tools.db;
+
+import com.whalin.MemCached.MemCachedClient;
+import com.whalin.MemCached.SockIOPool;
+import org.apache.log4j.Logger;
+
+/**
+ * company: 北京通付盾数据科技有限公司
+ * user: chenzuoli
+ * date: 2018/6/7
+ * time: 18:42
+ * description: memcached 连接池工具类
+ */
+
+public class MemcachedPoolUtils {
+    private static Logger logger = Logger.getLogger(MemcachedPoolUtils.class);
+    private static MemCachedClient cachedClient;
+
+    private MemcachedPoolUtils(String[] host, String[] port) {
+        try {
+            cachedClient = new MemCachedClient();
+            //获取连接池的实例
+            SockIOPool pool = SockIOPool.getInstance();
+
+            //服务器列表及其权重
+            String[] servers = new String[host.length];
+            for (int i = 0; i < host.length; i++) {
+                servers[i] = host[i] + ":" + port[i];
+            }
+            Integer[] weights = {3};
+
+            //设置服务器信息
+            pool.setServers(servers);
+            pool.setWeights(weights);
+
+            //设置初始连接数、最小连接数、最大连接数、最大处理时间
+            pool.setInitConn(10);
+            pool.setMinConn(10);
+            pool.setMaxConn(1000);
+            pool.setMaxIdle(1000 * 60 * 60);
+
+            //设置连接池守护线程的睡眠时间
+            pool.setMaintSleep(60);
+
+            //设置TCP参数，连接超时
+            pool.setNagle(false);
+            pool.setSocketTO(60);
+            pool.setSocketConnectTO(0);
+
+            //初始化并启动连接池
+            pool.initialize();
+
+            //压缩设置，超过指定大小的都压缩
+//      cachedClient.setCompressEnable(true);
+//      cachedClient.setCompressThreshold(1024*1024);
+        } catch (Exception e) {
+            logger.error("initialize memcached pool exception, the host is " + host + ", port is " + port, e);
+        }
+    }
+
+    public static MemcachedPoolUtils getInstance(String[] host, String[] port) {
+        return new MemcachedPoolUtils(host, port);
+    }
+
+    public boolean add(String key, Object value) {
+        if (cachedClient == null) {
+            cachedClient = new MemCachedClient();
+        }
+        return cachedClient.add(key, value);
+    }
+
+    public boolean add(String key, Object value, Integer expire) {
+        if (cachedClient == null) {
+            cachedClient = new MemCachedClient();
+        }
+        return cachedClient.add(key, value, expire);
+    }
+
+    public boolean put(String key, Object value) {
+        if (cachedClient == null) {
+            cachedClient = new MemCachedClient();
+        }
+        return cachedClient.set(key, value);
+    }
+
+    public boolean put(String key, Object value, Integer expire) {
+        if (cachedClient == null) {
+            cachedClient = new MemCachedClient();
+        }
+        return cachedClient.set(key, value, expire);
+    }
+
+    public boolean replace(String key, Object value) {
+        if (cachedClient == null) {
+            cachedClient = new MemCachedClient();
+        }
+        return cachedClient.replace(key, value);
+    }
+
+    public boolean replace(String key, Object value, Integer expire) {
+        if (cachedClient == null) {
+            cachedClient = new MemCachedClient();
+        }
+        return cachedClient.replace(key, value, expire);
+    }
+
+    public Object get(String key) {
+        if (cachedClient == null) {
+            cachedClient = new MemCachedClient();
+        }
+        return cachedClient.get(key);
+    }
+
+}

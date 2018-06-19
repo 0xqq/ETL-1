@@ -1,0 +1,1945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="etltools" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="de8e7c5e-cb5f-40b7-8446-73629bd0e968" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/TestFileDelimiterRecognizer.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_2_4.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_4_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_tukaani_xz_1_5.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Tools20180613.iml" afterPath="$PROJECT_DIR$/Tools20180613.iml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/AESCoder.java" afterPath="$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/AESCoder.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/payegis/tools/file/ExcelUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/payegis/tools/file/ExcelUtils.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/payegis/tools/file/FileDelimiterRecognizer.java" afterPath="$PROJECT_DIR$/src/main/java/com/payegis/tools/file/FileDelimiterRecognizer.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/payegis/tools/file/FileDivisionETL.java" afterPath="$PROJECT_DIR$/src/main/java/com/payegis/tools/file/FileDivisionETL.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/payegis/tools/file/FileUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/payegis/tools/file/FileUtils.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/payegis/tools/util/ColumnValueEtl.java" afterPath="$PROJECT_DIR$/src/main/java/com/payegis/tools/util/ColumnValueEtl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/payegis/tools/util/Utils.java" afterPath="$PROJECT_DIR$/src/main/java/com/payegis/tools/util/Utils.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestFileDivision.java" afterPath="$PROJECT_DIR$/src/test/java/TestFileDivision.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestNumberUtils.java" afterPath="$PROJECT_DIR$/src/test/java/TestNumberUtils.java" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="log/" />
+    <ignored path=".idea/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/util/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="20" column="65" lean-forward="true" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
+              <folding>
+                <element signature="docComment;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#overdueScope#0;class#Utils#0" expanded="false" />
+                <element signature="method#overdueScope#0;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#overdueScope#1;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#getOverdueScope#0;class#Utils#0" expanded="false" />
+                <element signature="method#getOverdueScope#0;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#transformString#0;class#Utils#0" expanded="false" />
+                <element signature="method#transformString#0;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#moneyScope#0;class#Utils#0" expanded="false" />
+                <element signature="method#moneyScope#0;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#moneyScope#1;class#Utils#0" expanded="false" />
+                <element signature="method#moneyScope#1;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#moneyScopeInterval#0;class#Utils#0" expanded="false" />
+                <element signature="method#moneyScopeInterval#0;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#getIsHit#0;class#Utils#0" expanded="false" />
+                <element signature="method#getIsHit#0;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#transformDuration#0;class#Utils#0" expanded="false" />
+                <element signature="method#transformDuration#0;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#dateInterval#0;class#Utils#0" expanded="false" />
+                <element signature="method#dateInterval#0;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#decryption#0;class#Utils#0" expanded="false" />
+                <element signature="method#decryption#0;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#closeFileStream#0;class#Utils#0" expanded="false" />
+                <element signature="method#closeFileStream#0;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#countNum#0;class#Utils#0" expanded="false" />
+                <element signature="method#countNum#0;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#getStatCodeMean#0;class#Utils#0" expanded="false" />
+                <element signature="method#getStatCodeMean#0;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#getRecentTime#0;class#Utils#0" expanded="false" />
+                <element signature="method#getRecentTime#0;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#getRecentJsonObject#0;class#Utils#0" expanded="false" />
+                <element signature="method#getRecentJsonObject#0;class#Utils#0" expanded="false" />
+                <element signature="docComment;method#encryptData#0;class#Utils#0" expanded="false" />
+                <element signature="method#encryptData#0;class#Utils#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/string/StringUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="79">
+              <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#init#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#init#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#checkValidJsonObjectStr#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#checkValidJsonObjectStr#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#checkValidJsonArrayStr#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#checkValidJsonArrayStr#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#addEscape#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#addEscape#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#transformValue#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#transformValue#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#valueToStringValue#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#valueToStringValue#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#expandValueByKey#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#reduceValueByKey#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#reduceValueByKey#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#replaceJsonKey#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#replaceJsonKey#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#replaceMapKey#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#replaceMapKey#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#removeNullValueOfMap#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#removeNullValueOfMap#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#getKeyOfJson#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#getKeyOfJson#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#iterateJson#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#iterateJson#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#etlJsonStr#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#etlJsonStr#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#etlJsonObject#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#etlJsonObject#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#iterateJsonMap#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#iterateJsonMap#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#getNeedColumn#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#getNeedColumn#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#jsonStrKeyCamelNamed#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#jsonStrKeyCamelNamed#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#camelNamed#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#camelNamed#0;class#StringUtils#0" expanded="false" />
+                <element signature="docComment;method#averageAssign#0;class#StringUtils#0" expanded="false" />
+                <element signature="method#averageAssign#0;class#StringUtils#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Coder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/Coder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;field#KEY_MAC#0;class#Coder#0" expanded="false" />
+                <element signature="docComment;method#decryptBASE64#0;class#Coder#0" expanded="false" />
+                <element signature="method#decryptBASE64#0;class#Coder#0" expanded="false" />
+                <element signature="docComment;method#encryptBASE64#0;class#Coder#0" expanded="false" />
+                <element signature="method#encryptBASE64#0;class#Coder#0" expanded="false" />
+                <element signature="docComment;method#encryptMD5#0;class#Coder#0" expanded="false" />
+                <element signature="method#encryptMD5#0;class#Coder#0" expanded="false" />
+                <element signature="docComment;method#encryptSHA#0;class#Coder#0" expanded="false" />
+                <element signature="method#encryptSHA#0;class#Coder#0" expanded="false" />
+                <element signature="docComment;method#initMacKey#0;class#Coder#0" expanded="false" />
+                <element signature="method#initMacKey#0;class#Coder#0" expanded="false" />
+                <element signature="docComment;method#encryptHMAC#0;class#Coder#0" expanded="false" />
+                <element signature="method#encryptHMAC#0;class#Coder#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MD5Utils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/MD5Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;class#MD5Utils#0" expanded="false" />
+                <element signature="docComment;method#strToMd5_32#0;class#MD5Utils#0" expanded="false" />
+                <element signature="method#strToMd5_32#0;class#MD5Utils#0" expanded="false" />
+                <element signature="docComment;method#strToMd5_16#0;class#MD5Utils#0" expanded="false" />
+                <element signature="method#strToMd5_16#0;class#MD5Utils#0" expanded="false" />
+                <element signature="docComment;method#encode#0;class#MD5Utils#0" expanded="false" />
+                <element signature="method#encode#0;class#MD5Utils#0" expanded="false" />
+                <element signature="docComment;method#decode#0;class#MD5Utils#0" expanded="false" />
+                <element signature="method#decode#0;class#MD5Utils#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RSACoder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/RSACoder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1075">
+              <caret line="225" column="0" lean-forward="false" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;method#sign#0;class#RSACoder#0" expanded="false" />
+                <element signature="method#sign#0;class#RSACoder#0" expanded="false" />
+                <element signature="docComment;method#verify#0;class#RSACoder#0" expanded="false" />
+                <element signature="method#verify#0;class#RSACoder#0" expanded="false" />
+                <element signature="docComment;method#decryptByPrivateKey#0;class#RSACoder#0" expanded="false" />
+                <element signature="method#decryptByPrivateKey#0;class#RSACoder#0" expanded="false" />
+                <element signature="docComment;method#decryptByPublicKey#0;class#RSACoder#0" expanded="false" />
+                <element signature="method#decryptByPublicKey#0;class#RSACoder#0" expanded="false" />
+                <element signature="docComment;method#encryptByPublicKey#0;class#RSACoder#0" expanded="false" />
+                <element signature="method#encryptByPublicKey#0;class#RSACoder#0" expanded="false" />
+                <element signature="docComment;method#encryptByPrivateKey#0;class#RSACoder#0" expanded="false" />
+                <element signature="method#encryptByPrivateKey#0;class#RSACoder#0" expanded="false" />
+                <element signature="docComment;method#getPrivateKey#0;class#RSACoder#0" expanded="false" />
+                <element signature="method#getPrivateKey#0;class#RSACoder#0" expanded="false" />
+                <element signature="docComment;method#getPublicKey#0;class#RSACoder#0" expanded="false" />
+                <element signature="method#getPublicKey#0;class#RSACoder#0" expanded="false" />
+                <element signature="docComment;method#initKey#0;class#RSACoder#0" expanded="false" />
+                <element signature="method#initKey#0;class#RSACoder#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ColumnValueEtl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/util/ColumnValueEtl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+              <folding>
+                <element signature="docComment;class#ColumnValueEtl#0" expanded="false" />
+                <element signature="docComment;method#etl#0;class#ColumnValueEtl#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShaUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/ShaUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;class#ShaUtils#0" expanded="false" />
+                <element signature="docComment;method#SHA256#0;class#ShaUtils#0" expanded="false" />
+                <element signature="docComment;method#SHA512#0;class#ShaUtils#0" expanded="false" />
+                <element signature="docComment;method#SHA512#1;class#ShaUtils#0" expanded="false" />
+                <element signature="docComment;method#SHA#0;class#ShaUtils#0" expanded="false" />
+                <element signature="method#SHA#0;class#ShaUtils#0" expanded="false" />
+                <element signature="e#1551#1562#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AESCoder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/AESCoder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+              <folding>
+                <element signature="docComment;field#ALGORITHM#0;class#AESCoder#0" expanded="false" />
+                <element signature="docComment;method#toKey#0;class#AESCoder#0" expanded="false" />
+                <element signature="method#toKey#0;class#AESCoder#0" expanded="false" />
+                <element signature="docComment;method#decrypt#0;class#AESCoder#0" expanded="false" />
+                <element signature="method#decrypt#0;class#AESCoder#0" expanded="false" />
+                <element signature="docComment;method#encrypt#0;class#AESCoder#0" expanded="false" />
+                <element signature="method#encrypt#0;class#AESCoder#0" expanded="false" />
+                <element signature="docComment;method#initKey#0;class#AESCoder#0" expanded="false" />
+                <element signature="method#initKey#0;class#AESCoder#0" expanded="false" />
+                <element signature="docComment;method#initKey#1;class#AESCoder#0" expanded="false" />
+                <element signature="method#initKey#1;class#AESCoder#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Base64.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/Base64.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+              <folding>
+                <element signature="docComment;class#Base64#0" expanded="false" />
+                <element signature="docComment;method#decryptBase64#0;class#Base64#0" expanded="false" />
+                <element signature="docComment;method#encodeBase64#0;class#Base64#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NumberUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/string/NumberUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="388">
+              <caret line="155" column="68" lean-forward="false" selection-start-line="155" selection-start-column="68" selection-end-line="155" selection-end-column="68" />
+              <folding>
+                <element signature="docComment;class#NumberUtils#0" expanded="false" />
+                <element signature="docComment;method#moneyEtl#0;class#NumberUtils#0" expanded="false" />
+                <element signature="method#moneyEtl#0;class#NumberUtils#0" expanded="false" />
+                <element signature="docComment;method#addNum#0;class#NumberUtils#0" expanded="false" />
+                <element signature="method#addNum#0;class#NumberUtils#0" expanded="false" />
+                <element signature="docComment;method#maxNum#0;class#NumberUtils#0" expanded="false" />
+                <element signature="method#maxNum#0;class#NumberUtils#0" expanded="false" />
+                <element signature="docComment;method#transformFloatStrToIntStr#0;class#NumberUtils#0" expanded="false" />
+                <element signature="method#transformFloatStrToIntStr#0;class#NumberUtils#0" expanded="false" />
+                <element signature="docComment;method#transformNumberToDouble#0;class#NumberUtils#0" expanded="false" />
+                <element signature="docComment;method#transformNumberToDouble#1;class#NumberUtils#0" expanded="false" />
+                <element signature="method#transformNumberToDouble#1;class#NumberUtils#0" expanded="false" />
+                <element signature="docComment;method#transformFloatStrToInt#0;class#NumberUtils#0" expanded="false" />
+                <element signature="method#transformFloatStrToInt#0;class#NumberUtils#0" expanded="false" />
+                <element signature="docComment;method#getLessThanNum#0;class#NumberUtils#0" expanded="false" />
+                <element signature="method#getLessThanNum#0;class#NumberUtils#0" expanded="false" />
+                <element signature="docComment;method#getRandomNum#0;class#NumberUtils#0" expanded="false" />
+                <element signature="method#getRandomNum#0;class#NumberUtils#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ExternalPropertyUtil</find>
+      <find>StringUtil</find>
+      <find>init(String</find>
+      <find>expand</find>
+      <find>encryptData</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>ExternalPropertyUtils</replace>
+      <replace>StringUtils</replace>
+    </replaceStrings>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/czl/personal/PhoneUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/czl/encrypt/MD5Utils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/czl/encrypt/ShaUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/czl/file/FileUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/czl/string/CharacterUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/czl/util/Base64PictureUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/czl/util/RegexUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/czl/db/MemcachedPoolUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/czl/db/MemcachedUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/czl/db/MongoDBReplsetUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/file/AppendToFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/file/MergeFileUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/file/MergeFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/db/MongoDBReplsetUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/Coder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/RSACoder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/ShaUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/service/HttpUtils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestDateTimeUtils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestFileUtils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPhoneUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/Base64.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/file/FileDivision.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/personal/IdCardUtils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestStringUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/datetime/DateTimeUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/db/ExternalDBCPUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/db/HBaseUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/db/HDFSUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/db/MemcachedPoolUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/db/MongoDBUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/personal/NameUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/personal/PhoneUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/string/CharacterUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/string/NumberUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/string/StringUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/util/Base64PictureUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/util/ExternalPropertyUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/util/RegexUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/file/ExcelUtils.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/Tools20180613.iml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/file/FileUtils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestFileDivision.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/file/FileDivisionETL.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/util/ColumnValueEtl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestNumberUtils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestFileDelimiterRecognizer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/file/FileDelimiterRecognizer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/AESCoder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/payegis/tools/util/Utils.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Maven\repository" />
+        <option name="mavenHome" value="D:/Maven/apache-maven-3.5.0" />
+        <option name="userSettingsFile" value="D:\Maven\apache-maven-3.5.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1932" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>ECMAScript 6 migration aidsJavaScript</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>GeneralScala</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Kotlin</id>
+          </State>
+          <State>
+            <id>Plugin DevKit</id>
+          </State>
+          <State>
+            <id>Redundant constructsKotlin</id>
+          </State>
+          <State>
+            <id>Scala</id>
+          </State>
+          <State>
+            <id>Style issuesKotlin</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+          <State>
+            <id>XSLT</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="etltools" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="datetime" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="encrypt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="file" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="sh" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="string" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tools20180613" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tools20180613" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ETL" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.18122128" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="extract.method.default.visibility" value="private" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.payegis.tools.encrypt" />
+      <recent name="com.payegis.tools.service" />
+      <recent name="com.payegis.tools.file" />
+      <recent name="com.payegis.czl.db" />
+      <recent name="com.payegis.czl.string" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEA\2017.3.3\WorkSpace\Tools20180613\src\main\java\com\payegis\tools\sh" />
+      <recent name="D:\IDEA\2017.3.3\WorkSpace\Tools20180613\src\main\java\com\payegis\tools\sql" />
+      <recent name="D:\IDEA\2017.3.3\WorkSpace\Tools20180613\src\main\java\com\payegis\tools\js" />
+      <recent name="D:\IDEA\2017.3.3\WorkSpace\Tools20180613\src\main\java\com\payegis\czl\encrypt" />
+      <recent name="D:\IDEA\2017.3.3\WorkSpace\Tools20180613\src\main\java\com\payegis\czl\util" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.TestFileDelimiterRecognizer">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration name="TestFileDelimiterRecognizer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="TestFileDelimiterRecognizer" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="d:\pp\conf\delimiterdb.txt C:\Users\Chen\Desktop\data.txt" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Tools20180613" />
+      <envs />
+    </configuration>
+    <configuration name="TestFileDivision" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="TestFileDivision" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="C:\Users\Chen\Desktop\data.txt" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Tools20180613" />
+      <envs />
+    </configuration>
+    <configuration name="TestNumberUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="TestNumberUtils" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Tools20180613" />
+      <envs />
+    </configuration>
+    <configuration name="TestPhoneUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="TestPhoneUtils" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Tools20180613" />
+      <envs />
+    </configuration>
+    <configuration name="TestStringUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="TestStringUtils" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Tools20180613" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.TestPhoneUtils" />
+      <item index="1" class="java.lang.String" itemvalue="Application.TestNumberUtils" />
+      <item index="2" class="java.lang.String" itemvalue="Application.TestStringUtils" />
+      <item index="3" class="java.lang.String" itemvalue="Application.TestFileDivision" />
+      <item index="4" class="java.lang.String" itemvalue="Application.TestFileDelimiterRecognizer" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.TestFileDelimiterRecognizer" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TestNumberUtils" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TestFileDivision" />
+        <item index="3" class="java.lang.String" itemvalue="Application.TestStringUtils" />
+        <item index="4" class="java.lang.String" itemvalue="Application.TestPhoneUtils" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\Chen\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\IDEA\2017.3.3\WorkSpace\Tools20180613" />
+          <option name="myCopyRoot" value="D:\IDEA\2017.3.3\WorkSpace\Tools20180613" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\IDEA\2017.3.3\WorkSpace\Tools20180613\.idea" />
+          <option name="myCopyRoot" value="D:\IDEA\2017.3.3\WorkSpace\Tools20180613\.idea" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\IDEA\2017.3.3\WorkSpace\Tools20180613" />
+          <option name="myCopyRoot" value="D:\IDEA\2017.3.3\WorkSpace\Tools20180613" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="de8e7c5e-cb5f-40b7-8446-73629bd0e968" name="Default" comment="" />
+      <created>1528855058075</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1528855058075</updated>
+      <workItem from="1528855059760" duration="20250000" />
+      <workItem from="1528936343933" duration="17623000" />
+      <workItem from="1529022960702" duration="29240000" />
+      <workItem from="1529369065358" duration="8624000" />
+      <workItem from="1529378157795" duration="18202000" />
+    </task>
+    <task id="LOCAL-00001" summary="清洗工具类">
+      <created>1528869357871</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1528869357871</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1.增加加解密类Base64；&#10;2.增加写文件、合并文件类；&#10;3.增加图片与base64码转换类；&#10;4.增加http post请求服务类；&#10;5.增加js、sh、sql脚本模块；">
+      <created>1528870416043</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1528870416043</updated>
+    </task>
+    <task id="LOCAL-00003" summary="1.增加加解密类Base64；&#10;2.增加写文件、合并文件类；&#10;3.增加图片与base64码转换类；&#10;4.增加http post请求服务类；&#10;5.增加js、sh、sql脚本模块；">
+      <created>1528870445035</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1528870445035</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1.整理代码结构，美观代码，增加类、方法注释">
+      <created>1528876166975</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1528876166975</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1.日期处理工具类增加MM/dd/yy格式日期处理，同理更新其他正则及匹配方法；">
+      <created>1528956019684</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1528956019684</updated>
+    </task>
+    <task id="LOCAL-00006" summary="1.增加文件列分隔符自动识别的工具类，目前只做到了大致的识别，后期做到指定分隔符，并丰富分隔符库的方法；">
+      <created>1528972011555</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1528972011555</updated>
+    </task>
+    <task id="LOCAL-00007" summary="1.日期转换工具增加yyyy/mm和yyyy-MM-dd HH:mm格式，相应地更改其他日期处理方法；&#10;2.修复bug：当日期字符串为201803时，被误判为yyyyMMdd格式；&#10;3.增加文件行按照指定分隔符切分，并对切分后的字段做不同方法进行清洗的工具类；&#10;4.FileUtils工具类中增加对整个文件的重复行进行去重的功能方法；">
+      <created>1529054564323</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1529054564323</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="93939000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24625267" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3995381" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="清洗工具类" />
+    <MESSAGE value="1.增加加解密类Base64；&#10;2.增加写文件、合并文件类；&#10;3.增加图片与base64码转换类；&#10;4.增加http post请求服务类；&#10;5.增加js、sh、sql脚本模块；" />
+    <MESSAGE value="1.整理代码结构，美观代码，增加类、方法注释" />
+    <MESSAGE value="1.日期处理工具类增加MM/dd/yy格式日期处理，同理更新其他正则及匹配方法；" />
+    <MESSAGE value="1.增加文件列分隔符自动识别的工具类，目前只做到了大致的识别，后期做到指定分隔符，并丰富分隔符库的方法；" />
+    <MESSAGE value="1.日期转换工具增加yyyy/mm和yyyy-MM-dd HH:mm格式，相应地更改其他日期处理方法；&#10;2.修复bug：当日期字符串为201803时，被误判为yyyyMMdd格式；&#10;3.增加文件行按照指定分隔符切分，并对切分后的字段做不同方法进行清洗的工具类；&#10;4.FileUtils工具类中增加对整个文件的重复行进行去重的功能方法；" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.日期转换工具增加yyyy/mm和yyyy-MM-dd HH:mm格式，相应地更改其他日期处理方法；&#10;2.修复bug：当日期字符串为201803时，被误判为yyyyMMdd格式；&#10;3.增加文件行按照指定分隔符切分，并对切分后的字段做不同方法进行清洗的工具类；&#10;4.FileUtils工具类中增加对整个文件的重复行进行去重的功能方法；" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/payegis/tools/file/FileDelimiterRecognizer.java</url>
+          <line>159</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/TestStringUtils.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/TestStringUtils.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/payegis/tools/util/ColumnValueEtl.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/payegis/tools/string/NumberUtils.java</url>
+          <line>156</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="25" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestFileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="21" column="57" lean-forward="true" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPhoneUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JDK8/install/src.zip!/java/lang/Float.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="48" column="19" lean-forward="false" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JDK8/install/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="51" column="37" lean-forward="true" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JDK8/install/src.zip!/java/lang/Number.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-675">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JDK8/install/src.zip!/java/lang/Math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2541">
+          <caret line="714" column="7" lean-forward="true" selection-start-line="714" selection-start-column="7" selection-end-line="714" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestStringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#380#381#0" expanded="false" />
+            <element signature="e#400#401#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/file/MergeFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="docComment;class#MergeFile#0" expanded="false" />
+            <element signature="docComment;method#mergeFiles#0;class#MergeFile#0" expanded="false" />
+            <element signature="method#mergeFiles#0;class#MergeFile#0" expanded="false" />
+            <element signature="docComment;method#mergeDirFiles#0;class#MergeFile#0" expanded="false" />
+            <element signature="method#mergeDirFiles#0;class#MergeFile#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/personal/IdCardUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#IdCardUtils#0" expanded="false" />
+            <element signature="initializer##0;class#IdCardUtils#0" expanded="false" />
+            <element signature="docComment;method#checkIDCard#0;class#IdCardUtils#0" expanded="false" />
+            <element signature="method#checkIDCard#0;class#IdCardUtils#0" expanded="false" />
+            <element signature="docComment;method#getIdCardCalendar#0;class#IdCardUtils#0" expanded="false" />
+            <element signature="method#getIdCardCalendar#0;class#IdCardUtils#0" expanded="false" />
+            <element signature="docComment;method#etlIdCard#0;class#IdCardUtils#0" expanded="false" />
+            <element signature="method#etlIdCard#0;class#IdCardUtils#0" expanded="false" />
+            <element signature="docComment;method#getRandomIdCard#0;class#IdCardUtils#0" expanded="false" />
+            <element signature="method#getRandomIdCard#0;class#IdCardUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/personal/NameUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <element signature="docComment;class#NameUtils#0" expanded="false" />
+            <element signature="docComment;method#etlName#0;class#NameUtils#0" expanded="false" />
+            <element signature="method#etlName#0;class#NameUtils#0" expanded="false" />
+            <element signature="docComment;method#getRandomChinese#0;class#NameUtils#0" expanded="false" />
+            <element signature="method#getRandomChinese#0;class#NameUtils#0" expanded="false" />
+            <element signature="docComment;method#getRandomName#0;class#NameUtils#0" expanded="false" />
+            <element signature="method#getRandomName#0;class#NameUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/personal/PhoneUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <element signature="docComment;class#PhoneUtils#0" expanded="false" />
+            <element signature="initializer##0;class#PhoneUtils#0" expanded="false" />
+            <element signature="method#getPhoneFrom#0;class#PhoneUtils#0" expanded="false" />
+            <element signature="method#phoneInit#0;class#PhoneUtils#0" expanded="false" />
+            <element signature="method#getRandomPhone#0;class#PhoneUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/service/HttpUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#HttpUtils#0" expanded="false" />
+            <element signature="method#sendPost#0;class#HttpUtils#0" expanded="false" />
+            <element signature="method#getNameValuePairArr#0;class#HttpUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/sh/distinctText.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/util/Base64PictureUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#Base64PictureUtils#0" expanded="false" />
+            <element signature="method#getImageStr#0;class#Base64PictureUtils#0" expanded="false" />
+            <element signature="method#generateImage#0;class#Base64PictureUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/string/CharacterUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#CharacterUtils#0" expanded="false" />
+            <element signature="docComment;method#bj2qj#0;class#CharacterUtils#0" expanded="false" />
+            <element signature="method#bj2qj#0;class#CharacterUtils#0" expanded="false" />
+            <element signature="docComment;method#qj2bj#0;class#CharacterUtils#0" expanded="false" />
+            <element signature="method#qj2bj#0;class#CharacterUtils#0" expanded="false" />
+            <element signature="docComment;method#qj2bjCharNumber#0;class#CharacterUtils#0" expanded="false" />
+            <element signature="method#qj2bjCharNumber#0;class#CharacterUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/js/distinctMongo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/db/ExternalDBCPUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="18" column="3" lean-forward="false" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding>
+            <element signature="docComment;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="docComment;method#getConnection#0;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="method#getConnection#0;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="docComment;method#close#0;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="method#close#0;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="docComment;method#close#1;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="method#close#1;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="docComment;method#close#2;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="method#close#2;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="docComment;method#executeQuery#0;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="method#executeQuery#0;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="docComment;method#executeUpdate#0;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="method#executeUpdate#0;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="docComment;method#executeBatch#0;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="method#executeBatch#0;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="docComment;method#executeBatch#1;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="method#executeBatch#1;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="docComment;method#getResultList#0;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="method#getResultList#0;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="docComment;method#getColumnName#0;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="method#getColumnName#0;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="docComment;method#setStatParams#0;class#ExternalDBCPUtils#0" expanded="false" />
+            <element signature="method#setStatParams#0;class#ExternalDBCPUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/db/HBaseUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="30" column="3" lean-forward="false" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+          <folding>
+            <element signature="docComment;class#HBaseUtils#0" expanded="false" />
+            <element signature="docComment;method#getConf#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#getConf#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="docComment;method#getConnection#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#getConnection#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="docComment;method#getAdmin#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#getAdmin#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#getTable#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="docComment;method#createTable#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#createTable#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="docComment;method#insertOne#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#insertOne#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="docComment;method#insertBatch#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#insertBatch#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="docComment;method#insertBatch#1;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#insertBatch#1;class#HBaseUtils#0" expanded="false" />
+            <element signature="docComment;method#dropTable#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#dropTable#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="docComment;method#deleteOneRowByRowkey#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#deleteOneRowByRowkey#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="docComment;method#deleteBatchRowByRowkey#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#deleteBatchRowByRowkey#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="docComment;method#queryAll#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#queryAll#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="docComment;method#queryByCondition#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#queryByCondition#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="docComment;method#queryByCondition#1;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#queryByCondition#1;class#HBaseUtils#0" expanded="false" />
+            <element signature="docComment;method#queryByCondition#2;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#queryByCondition#2;class#HBaseUtils#0" expanded="false" />
+            <element signature="docComment;method#rowkeyFuzzyQuery#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#rowkeyFuzzyQuery#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="docComment;method#resolveResult#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#resolveResult#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="e#20499#20573#0" expanded="false" />
+            <element signature="docComment;method#closeTableAndResult#0;class#HBaseUtils#0" expanded="false" />
+            <element signature="method#closeTableAndResult#0;class#HBaseUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/db/HDFSUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="20" column="3" lean-forward="false" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          <folding>
+            <element signature="docComment;class#HDFSUtils#0" expanded="false" />
+            <element signature="docComment;method#createFile#0;class#HDFSUtils#0" expanded="false" />
+            <element signature="method#createFile#0;class#HDFSUtils#0" expanded="false" />
+            <element signature="docComment;method#uploadFile#0;class#HDFSUtils#0" expanded="false" />
+            <element signature="method#uploadFile#0;class#HDFSUtils#0" expanded="false" />
+            <element signature="docComment;method#rename#0;class#HDFSUtils#0" expanded="false" />
+            <element signature="method#rename#0;class#HDFSUtils#0" expanded="false" />
+            <element signature="docComment;method#delete#0;class#HDFSUtils#0" expanded="false" />
+            <element signature="method#delete#0;class#HDFSUtils#0" expanded="false" />
+            <element signature="docComment;method#mkdir#0;class#HDFSUtils#0" expanded="false" />
+            <element signature="method#mkdir#0;class#HDFSUtils#0" expanded="false" />
+            <element signature="docComment;method#readFile#0;class#HDFSUtils#0" expanded="false" />
+            <element signature="method#readFile#0;class#HDFSUtils#0" expanded="false" />
+            <element signature="docComment;method#getDirectoryFromHdfs#0;class#HDFSUtils#0" expanded="false" />
+            <element signature="method#getDirectoryFromHdfs#0;class#HDFSUtils#0" expanded="false" />
+            <element signature="docComment;method#hdfsFileExists#0;class#HDFSUtils#0" expanded="false" />
+            <element signature="method#hdfsFileExists#0;class#HDFSUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/db/MemcachedPoolUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/db/MemcachedUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/db/MongoDBReplsetUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="47" column="58" lean-forward="false" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/db/MongoDBUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/file/AppendToFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="70" lean-forward="false" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
+          <folding>
+            <element signature="docComment;class#AppendToFile#0" expanded="false" />
+            <element signature="docComment;method#appendMethodA#0;class#AppendToFile#0" expanded="false" />
+            <element signature="method#appendMethodA#0;class#AppendToFile#0" expanded="false" />
+            <element signature="docComment;method#appendMethodB#0;class#AppendToFile#0" expanded="false" />
+            <element signature="method#appendMethodB#0;class#AppendToFile#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/file/ExcelUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+          <folding>
+            <element signature="method#readExcel#0;class#ExcelUtils#0" expanded="false" />
+            <element signature="method#readExcel2003#0;class#ExcelUtils#0" expanded="false" />
+            <element signature="method#readExcel2007#0;class#ExcelUtils#0" expanded="false" />
+            <element signature="e#6135#6196#0" expanded="false" />
+            <element signature="method#writeExcel#0;class#ExcelUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JDK8/install/src.zip!/java/io/BufferedWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="65" column="13" lean-forward="false" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JDK8/install/src.zip!/java/io/BufferedReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="69" column="37" lean-forward="true" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JDK8/install/src.zip!/java/io/Reader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tools20180613.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/file/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="50" column="6" lean-forward="false" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+          <folding>
+            <element signature="docComment;class#FileUtils#0" expanded="false" />
+            <element signature="docComment;method#readFile#0;class#FileUtils#0" expanded="false" />
+            <element signature="method#readFile#0;class#FileUtils#0" expanded="false" />
+            <element signature="docComment;method#readFileDeduplication#0;class#FileUtils#0" expanded="false" />
+            <element signature="method#readFileDeduplication#0;class#FileUtils#0" expanded="false" />
+            <element signature="docComment;method#readFileDeDuplByTika#0;class#FileUtils#0" expanded="false" />
+            <element signature="method#readFileDeDuplByTika#0;class#FileUtils#0" expanded="false" />
+            <element signature="docComment;method#readFile#1;class#FileUtils#0" expanded="false" />
+            <element signature="method#readFile#1;class#FileUtils#0" expanded="false" />
+            <element signature="docComment;method#readFileByTika#0;class#FileUtils#0" expanded="false" />
+            <element signature="method#readFileByTika#0;class#FileUtils#0" expanded="false" />
+            <element signature="docComment;method#mkdir#0;class#FileUtils#0" expanded="false" />
+            <element signature="method#mkdir#0;class#FileUtils#0" expanded="false" />
+            <element signature="docComment;method#isExistOrMkdir#0;class#FileUtils#0" expanded="false" />
+            <element signature="method#isExistOrMkdir#0;class#FileUtils#0" expanded="false" />
+            <element signature="docComment;method#getFileDir#0;class#FileUtils#0" expanded="false" />
+            <element signature="method#getFileDir#0;class#FileUtils#0" expanded="false" />
+            <element signature="docComment;method#coverFile#0;class#FileUtils#0" expanded="false" />
+            <element signature="method#coverFile#0;class#FileUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/datetime/DateTimeUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="385" column="0" lean-forward="false" selection-start-line="385" selection-start-column="0" selection-end-line="385" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#DateTimeUtils#0" expanded="false" />
+            <element signature="initializer##0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="docComment;method#dateStr2DateStr#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="docComment;method#parseStringToDate#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="docComment;method#getDateStrFromStr#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="docComment;method#getDateFormat#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="method#getDateFormat#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="docComment;method#getDateFormat2#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="docComment;method#dateStrToyMdHms#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="method#dateStrToyMdHms#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="docComment;method#dateStrToyMd#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="method#dateStrToyMd#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="docComment;method#getMaxTime#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="method#getMaxTime#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="docComment;method#compareTime#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="method#compareTime#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="docComment;method#strToSqlDate#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="method#strToSqlDate#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="docComment;method#dateTransform#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="method#dateTransform#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="docComment;method#timestampToDateStr#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="method#timestampToDateStr#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="docComment;method#currentTimeStr#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="method#currentTimeStr#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="docComment;method#currentDateStr#0;class#DateTimeUtils#0" expanded="false" />
+            <element signature="method#currentDateStr#0;class#DateTimeUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/log.error.file">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1283">
+          <caret line="201" column="196" lean-forward="true" selection-start-line="201" selection-start-column="196" selection-end-line="201" selection-end-column="196" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/log.info.file">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="25" column="100" lean-forward="true" selection-start-line="25" selection-start-column="100" selection-end-line="25" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/file/FileDivisionETL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#FileDivisionETL#0" expanded="false" />
+            <element signature="docComment;method#etl#0;class#FileDivisionETL#0" expanded="false" />
+            <element signature="docComment;method#etl#1;class#FileDivisionETL#0" expanded="false" />
+            <element signature="docComment;method#division#0;class#FileDivisionETL#0" expanded="false" />
+            <element signature="docComment;method#etlColumn#0;class#FileDivisionETL#0" expanded="false" />
+            <element signature="docComment;method#saveDelimiter#0;class#FileDivisionETL#0" expanded="false" />
+            <element signature="method#saveDelimiter#0;class#FileDivisionETL#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestNumberUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="32" column="74" lean-forward="false" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
+          <folding>
+            <element signature="e#350#351#0" expanded="false" />
+            <element signature="e#370#371#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="159" column="10" lean-forward="false" selection-start-line="159" selection-start-column="10" selection-end-line="159" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/util/ExternalPropertyUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding>
+            <element signature="docComment;class#ExternalPropertyUtils#0" expanded="false" />
+            <element signature="method#ExternalPropertyUtils#0;class#ExternalPropertyUtils#0" expanded="false" />
+            <element signature="docComment;method#readProperties#0;class#ExternalPropertyUtils#0" expanded="false" />
+            <element signature="method#readProperties#0;class#ExternalPropertyUtils#0" expanded="false" />
+            <element signature="docComment;method#getInstance#0;class#ExternalPropertyUtils#0" expanded="false" />
+            <element signature="method#getInstance#0;class#ExternalPropertyUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestFileDivision.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="19" column="53" lean-forward="false" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/util/RegexUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="69" lean-forward="false" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+          <folding>
+            <element signature="docComment;class#RegexUtils#0" expanded="false" />
+            <element signature="docComment;field#nameRegex#0;class#RegexUtils#0" expanded="false" />
+            <element signature="docComment;field#intRegex#0;class#RegexUtils#0" expanded="false" />
+            <element signature="docComment;field#pointMoneyRegex#0;class#RegexUtils#0" expanded="false" />
+            <element signature="docComment;field#ymdSlashRegex#0;class#RegexUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestFileDelimiterRecognizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#502#503#0" expanded="false" />
+            <element signature="e#553#554#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/file/FileDelimiterRecognizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="37" column="5" lean-forward="false" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#FileDelimiterRecognizer#0" expanded="false" />
+            <element signature="docComment;method#bestDelimiter#0;class#FileDelimiterRecognizer#0" expanded="false" />
+            <element signature="docComment;method#bestDelimiter#1;class#FileDelimiterRecognizer#0" expanded="false" />
+            <element signature="docComment;method#fileStandardDeviation#0;class#FileDelimiterRecognizer#0" expanded="false" />
+            <element signature="docComment;method#avgColumnNum#0;class#FileDelimiterRecognizer#0" expanded="false" />
+            <element signature="method#avgColumnNum#0;class#FileDelimiterRecognizer#0" expanded="false" />
+            <element signature="docComment;method#variance#0;class#FileDelimiterRecognizer#0" expanded="false" />
+            <element signature="method#variance#0;class#FileDelimiterRecognizer#0" expanded="false" />
+            <element signature="docComment;method#standardDeviation#0;class#FileDelimiterRecognizer#0" expanded="false" />
+            <element signature="method#standardDeviation#0;class#FileDelimiterRecognizer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/string/NumberUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="155" column="68" lean-forward="false" selection-start-line="155" selection-start-column="68" selection-end-line="155" selection-end-column="68" />
+          <folding>
+            <element signature="docComment;class#NumberUtils#0" expanded="false" />
+            <element signature="docComment;method#moneyEtl#0;class#NumberUtils#0" expanded="false" />
+            <element signature="method#moneyEtl#0;class#NumberUtils#0" expanded="false" />
+            <element signature="docComment;method#addNum#0;class#NumberUtils#0" expanded="false" />
+            <element signature="method#addNum#0;class#NumberUtils#0" expanded="false" />
+            <element signature="docComment;method#maxNum#0;class#NumberUtils#0" expanded="false" />
+            <element signature="method#maxNum#0;class#NumberUtils#0" expanded="false" />
+            <element signature="docComment;method#transformFloatStrToIntStr#0;class#NumberUtils#0" expanded="false" />
+            <element signature="method#transformFloatStrToIntStr#0;class#NumberUtils#0" expanded="false" />
+            <element signature="docComment;method#transformNumberToDouble#0;class#NumberUtils#0" expanded="false" />
+            <element signature="docComment;method#transformNumberToDouble#1;class#NumberUtils#0" expanded="false" />
+            <element signature="method#transformNumberToDouble#1;class#NumberUtils#0" expanded="false" />
+            <element signature="docComment;method#transformFloatStrToInt#0;class#NumberUtils#0" expanded="false" />
+            <element signature="method#transformFloatStrToInt#0;class#NumberUtils#0" expanded="false" />
+            <element signature="docComment;method#getLessThanNum#0;class#NumberUtils#0" expanded="false" />
+            <element signature="method#getLessThanNum#0;class#NumberUtils#0" expanded="false" />
+            <element signature="docComment;method#getRandomNum#0;class#NumberUtils#0" expanded="false" />
+            <element signature="method#getRandomNum#0;class#NumberUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/string/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#init#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#init#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#checkValidJsonObjectStr#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#checkValidJsonObjectStr#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#checkValidJsonArrayStr#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#checkValidJsonArrayStr#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#addEscape#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#addEscape#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#transformValue#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#transformValue#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#valueToStringValue#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#valueToStringValue#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#expandValueByKey#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#reduceValueByKey#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#reduceValueByKey#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#replaceJsonKey#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#replaceJsonKey#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#replaceMapKey#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#replaceMapKey#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#removeNullValueOfMap#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#removeNullValueOfMap#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#getKeyOfJson#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#getKeyOfJson#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#iterateJson#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#iterateJson#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#etlJsonStr#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#etlJsonStr#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#etlJsonObject#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#etlJsonObject#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#iterateJsonMap#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#iterateJsonMap#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#getNeedColumn#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#getNeedColumn#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#jsonStrKeyCamelNamed#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#jsonStrKeyCamelNamed#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#camelNamed#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#camelNamed#0;class#StringUtils#0" expanded="false" />
+            <element signature="docComment;method#averageAssign#0;class#StringUtils#0" expanded="false" />
+            <element signature="method#averageAssign#0;class#StringUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/AESCoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+          <folding>
+            <element signature="docComment;field#ALGORITHM#0;class#AESCoder#0" expanded="false" />
+            <element signature="docComment;method#toKey#0;class#AESCoder#0" expanded="false" />
+            <element signature="method#toKey#0;class#AESCoder#0" expanded="false" />
+            <element signature="docComment;method#decrypt#0;class#AESCoder#0" expanded="false" />
+            <element signature="method#decrypt#0;class#AESCoder#0" expanded="false" />
+            <element signature="docComment;method#encrypt#0;class#AESCoder#0" expanded="false" />
+            <element signature="method#encrypt#0;class#AESCoder#0" expanded="false" />
+            <element signature="docComment;method#initKey#0;class#AESCoder#0" expanded="false" />
+            <element signature="method#initKey#0;class#AESCoder#0" expanded="false" />
+            <element signature="docComment;method#initKey#1;class#AESCoder#0" expanded="false" />
+            <element signature="method#initKey#1;class#AESCoder#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/Base64.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding>
+            <element signature="docComment;class#Base64#0" expanded="false" />
+            <element signature="docComment;method#decryptBase64#0;class#Base64#0" expanded="false" />
+            <element signature="docComment;method#encodeBase64#0;class#Base64#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/Coder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;field#KEY_MAC#0;class#Coder#0" expanded="false" />
+            <element signature="docComment;method#decryptBASE64#0;class#Coder#0" expanded="false" />
+            <element signature="method#decryptBASE64#0;class#Coder#0" expanded="false" />
+            <element signature="docComment;method#encryptBASE64#0;class#Coder#0" expanded="false" />
+            <element signature="method#encryptBASE64#0;class#Coder#0" expanded="false" />
+            <element signature="docComment;method#encryptMD5#0;class#Coder#0" expanded="false" />
+            <element signature="method#encryptMD5#0;class#Coder#0" expanded="false" />
+            <element signature="docComment;method#encryptSHA#0;class#Coder#0" expanded="false" />
+            <element signature="method#encryptSHA#0;class#Coder#0" expanded="false" />
+            <element signature="docComment;method#initMacKey#0;class#Coder#0" expanded="false" />
+            <element signature="method#initMacKey#0;class#Coder#0" expanded="false" />
+            <element signature="docComment;method#encryptHMAC#0;class#Coder#0" expanded="false" />
+            <element signature="method#encryptHMAC#0;class#Coder#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/MD5Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#MD5Utils#0" expanded="false" />
+            <element signature="docComment;method#strToMd5_32#0;class#MD5Utils#0" expanded="false" />
+            <element signature="method#strToMd5_32#0;class#MD5Utils#0" expanded="false" />
+            <element signature="docComment;method#strToMd5_16#0;class#MD5Utils#0" expanded="false" />
+            <element signature="method#strToMd5_16#0;class#MD5Utils#0" expanded="false" />
+            <element signature="docComment;method#encode#0;class#MD5Utils#0" expanded="false" />
+            <element signature="method#encode#0;class#MD5Utils#0" expanded="false" />
+            <element signature="docComment;method#decode#0;class#MD5Utils#0" expanded="false" />
+            <element signature="method#decode#0;class#MD5Utils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/RSACoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1075">
+          <caret line="225" column="0" lean-forward="false" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;method#sign#0;class#RSACoder#0" expanded="false" />
+            <element signature="method#sign#0;class#RSACoder#0" expanded="false" />
+            <element signature="docComment;method#verify#0;class#RSACoder#0" expanded="false" />
+            <element signature="method#verify#0;class#RSACoder#0" expanded="false" />
+            <element signature="docComment;method#decryptByPrivateKey#0;class#RSACoder#0" expanded="false" />
+            <element signature="method#decryptByPrivateKey#0;class#RSACoder#0" expanded="false" />
+            <element signature="docComment;method#decryptByPublicKey#0;class#RSACoder#0" expanded="false" />
+            <element signature="method#decryptByPublicKey#0;class#RSACoder#0" expanded="false" />
+            <element signature="docComment;method#encryptByPublicKey#0;class#RSACoder#0" expanded="false" />
+            <element signature="method#encryptByPublicKey#0;class#RSACoder#0" expanded="false" />
+            <element signature="docComment;method#encryptByPrivateKey#0;class#RSACoder#0" expanded="false" />
+            <element signature="method#encryptByPrivateKey#0;class#RSACoder#0" expanded="false" />
+            <element signature="docComment;method#getPrivateKey#0;class#RSACoder#0" expanded="false" />
+            <element signature="method#getPrivateKey#0;class#RSACoder#0" expanded="false" />
+            <element signature="docComment;method#getPublicKey#0;class#RSACoder#0" expanded="false" />
+            <element signature="method#getPublicKey#0;class#RSACoder#0" expanded="false" />
+            <element signature="docComment;method#initKey#0;class#RSACoder#0" expanded="false" />
+            <element signature="method#initKey#0;class#RSACoder#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/encrypt/ShaUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#ShaUtils#0" expanded="false" />
+            <element signature="docComment;method#SHA256#0;class#ShaUtils#0" expanded="false" />
+            <element signature="docComment;method#SHA512#0;class#ShaUtils#0" expanded="false" />
+            <element signature="docComment;method#SHA512#1;class#ShaUtils#0" expanded="false" />
+            <element signature="docComment;method#SHA#0;class#ShaUtils#0" expanded="false" />
+            <element signature="method#SHA#0;class#ShaUtils#0" expanded="false" />
+            <element signature="e#1551#1562#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/util/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="20" column="65" lean-forward="true" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
+          <folding>
+            <element signature="docComment;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#overdueScope#0;class#Utils#0" expanded="false" />
+            <element signature="method#overdueScope#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#overdueScope#1;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#getOverdueScope#0;class#Utils#0" expanded="false" />
+            <element signature="method#getOverdueScope#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#transformString#0;class#Utils#0" expanded="false" />
+            <element signature="method#transformString#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#moneyScope#0;class#Utils#0" expanded="false" />
+            <element signature="method#moneyScope#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#moneyScope#1;class#Utils#0" expanded="false" />
+            <element signature="method#moneyScope#1;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#moneyScopeInterval#0;class#Utils#0" expanded="false" />
+            <element signature="method#moneyScopeInterval#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#getIsHit#0;class#Utils#0" expanded="false" />
+            <element signature="method#getIsHit#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#transformDuration#0;class#Utils#0" expanded="false" />
+            <element signature="method#transformDuration#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#dateInterval#0;class#Utils#0" expanded="false" />
+            <element signature="method#dateInterval#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#decryption#0;class#Utils#0" expanded="false" />
+            <element signature="method#decryption#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#closeFileStream#0;class#Utils#0" expanded="false" />
+            <element signature="method#closeFileStream#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#countNum#0;class#Utils#0" expanded="false" />
+            <element signature="method#countNum#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#getStatCodeMean#0;class#Utils#0" expanded="false" />
+            <element signature="method#getStatCodeMean#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#getRecentTime#0;class#Utils#0" expanded="false" />
+            <element signature="method#getRecentTime#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#getRecentJsonObject#0;class#Utils#0" expanded="false" />
+            <element signature="method#getRecentJsonObject#0;class#Utils#0" expanded="false" />
+            <element signature="docComment;method#encryptData#0;class#Utils#0" expanded="false" />
+            <element signature="method#encryptData#0;class#Utils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/payegis/tools/util/ColumnValueEtl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+          <folding>
+            <element signature="docComment;class#ColumnValueEtl#0" expanded="false" />
+            <element signature="docComment;method#etl#0;class#ColumnValueEtl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>etltools</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.18122128" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.18122128" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.18122128" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.18122128" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Tools20180613</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.18122128" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: log4j:log4j:1.2.17</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.18122128" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

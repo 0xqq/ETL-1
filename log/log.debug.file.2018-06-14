@@ -1,0 +1,6 @@
+2018-06-14 13:56:17 INFO  [main] TestDateTimeUtils.t1(22) - 2018-02-01
+2018-06-14 17:19:55 INFO  [main] com.payegis.tools.string.StringUtils.init(248) - please enter one data file path!
+2018-06-14 18:23:28 INFO  [main] com.payegis.tools.util.ExternalPropertyUtils.readProperties(37) - load property file D:\pp\conf\filedelimiter.properties start!
+2018-06-14 18:23:28 INFO  [main] com.payegis.tools.util.ExternalPropertyUtils.readProperties(42) - load property file success!
+2018-06-14 18:23:43 INFO  [main] com.payegis.tools.util.ExternalPropertyUtils.readProperties(37) - load property file D:\pp\conf\filedelimiter.properties start!
+2018-06-14 18:23:43 INFO  [main] com.payegis.tools.util.ExternalPropertyUtils.readProperties(42) - load property file success!

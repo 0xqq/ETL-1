@@ -1,0 +1,33 @@
+package com.payegis.tools.encrypt;
+
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
+
+/**
+ * Created by Chen on 2017/9/7.
+ */
+public class Base64 {
+
+    /**
+     * description: BASE64解密
+     * param: [key]
+     * return: byte[]
+     * date: 2018/6/13
+     * time: 14:07
+     */
+    public static byte[] decryptBase64(String key) throws Exception {
+        return (new BASE64Decoder()).decodeBuffer(key);
+    }
+
+    /**
+     * description: BASE64加密
+     * param: [key]
+     * return: java.lang.String
+     * date: 2018/6/13
+     * time: 14:07
+     */
+    public static String encodeBase64(byte[] key) throws Exception {
+        return (new BASE64Encoder()).encodeBuffer(key);
+    }
+
+}

@@ -1,0 +1,264 @@
+2018-06-15 13:51:56 ERROR [main] com.payegis.tools.string.StringUtils.etlJsonStr(341) - parse json string null exception!
+net.sf.json.JSONException: null object
+	at net.sf.json.JSONObject.verifyIsNull(JSONObject.java:2856)
+	at net.sf.json.JSONObject.keys(JSONObject.java:2229)
+	at com.payegis.tools.string.StringUtils.etlJsonObject(StringUtils.java:356)
+	at com.payegis.tools.string.StringUtils.etlJsonStr(StringUtils.java:328)
+	at TestStringUtils.t1(TestStringUtils.java:23)
+	at TestStringUtils.main(TestStringUtils.java:15)
+2018-06-15 13:54:16 ERROR [main] com.payegis.tools.string.StringUtils.etlJsonStr(341) - parse json string null exception!
+net.sf.json.JSONException: null object
+	at net.sf.json.JSONObject.verifyIsNull(JSONObject.java:2856)
+	at net.sf.json.JSONObject.keys(JSONObject.java:2229)
+	at com.payegis.tools.string.StringUtils.etlJsonObject(StringUtils.java:356)
+	at com.payegis.tools.string.StringUtils.etlJsonStr(StringUtils.java:328)
+	at TestStringUtils.t1(TestStringUtils.java:23)
+	at TestStringUtils.main(TestStringUtils.java:15)
+2018-06-15 14:27:11 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:27:11 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:27:11 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:27:11 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:27:11 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:27:11 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:27:11 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:27:11 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:27:11 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:27:11 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:27:11 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:27:11 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:27:11 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:27:11 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:27:11 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:31:18 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:32:15 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:32:19 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:32:19 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:42:22 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:42:40 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:42:40 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:42:40 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:42:41 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:42:41 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:42:41 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:42:41 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:42:41 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:42:41 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:42:41 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:42:41 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:42:41 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:42:41 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:42:41 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:42:41 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:42:41 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:42:41 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:44:51 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:44:51 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:44:51 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:44:51 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:44:51 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:44:51 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:44:51 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:44:51 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:44:51 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:44:51 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:44:51 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:44:51 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:47:40 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:47:40 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:48:08 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:48:08 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:48:13 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:48:17 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:48:17 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:51:06 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:51:06 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:51:06 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:51:06 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:51:06 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:51:16 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:51:16 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:51:27 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:51:27 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:51:30 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:51:33 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:51:33 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:59:15 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:59:15 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:59:15 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:59:15 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:59:15 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:59:24 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:59:24 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:59:30 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:59:30 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 14:59:33 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 14:59:35 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 14:59:35 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:00:19 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:00:19 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:00:19 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:00:19 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:00:19 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(147) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 15:01:29 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:01:29 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:01:34 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:01:34 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:01:35 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(149) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 15:01:37 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:01:37 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:01:56 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.dateStr2DateStr(83) - date string 2018-3-1 12:12 transform to format date string exception!
+java.lang.NullPointerException
+	at com.payegis.tools.datetime.DateTimeUtils.dateStr2DateStr(DateTimeUtils.java:80)
+	at com.payegis.tools.util.ColumnValueEtl.etl(ColumnValueEtl.java:63)
+	at com.payegis.tools.file.FileDivisionETL.lambda$etlColumn$1(FileDivisionETL.java:65)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at com.payegis.tools.file.FileDivisionETL.etlColumn(FileDivisionETL.java:59)
+	at com.payegis.tools.file.FileDivisionETL.etl(FileDivisionETL.java:30)
+	at TestFileDivision.main(TestFileDivision.java:20)
+2018-06-15 15:01:59 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:01:59 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:02:02 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:02:02 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:02:03 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(149) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 15:09:37 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:09:37 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:09:37 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:09:37 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:09:37 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(154) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 15:09:37 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:09:37 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:09:37 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.dateStr2DateStr(86) - date string 2018-3-1 12:12 transform to format date string exception!
+java.lang.NullPointerException
+	at com.payegis.tools.datetime.DateTimeUtils.dateStr2DateStr(DateTimeUtils.java:83)
+	at com.payegis.tools.util.ColumnValueEtl.etl(ColumnValueEtl.java:63)
+	at com.payegis.tools.file.FileDivisionETL.lambda$etlColumn$1(FileDivisionETL.java:65)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at com.payegis.tools.file.FileDivisionETL.etlColumn(FileDivisionETL.java:59)
+	at com.payegis.tools.file.FileDivisionETL.etl(FileDivisionETL.java:30)
+	at TestFileDivision.main(TestFileDivision.java:20)
+2018-06-15 15:09:37 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.dateStr2DateStr(86) - date string 2018/03 transform to format date string exception!
+java.lang.NullPointerException
+	at com.payegis.tools.datetime.DateTimeUtils.dateStr2DateStr(DateTimeUtils.java:83)
+	at com.payegis.tools.util.ColumnValueEtl.etl(ColumnValueEtl.java:63)
+	at com.payegis.tools.file.FileDivisionETL.lambda$etlColumn$1(FileDivisionETL.java:65)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at com.payegis.tools.file.FileDivisionETL.etlColumn(FileDivisionETL.java:59)
+	at com.payegis.tools.file.FileDivisionETL.etl(FileDivisionETL.java:30)
+	at TestFileDivision.main(TestFileDivision.java:20)
+2018-06-15 15:09:37 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:09:37 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:09:37 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:09:37 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:09:37 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(154) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 15:17:21 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:17:21 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:17:21 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:17:21 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:17:21 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(154) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 15:17:21 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:17:21 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:17:21 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:17:21 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:17:21 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:17:21 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:17:21 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(154) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 15:18:49 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:18:49 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:18:49 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:18:49 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:18:49 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(154) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 15:18:49 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:18:49 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:18:49 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:18:49 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:18:49 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 15:18:49 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 15:18:49 ERROR [main] com.payegis.tools.datetime.DateTimeUtils.parseStringToDate(154) - exception: java.text.ParseException: Unparseable date: "201803", date string 201803 is not valid!
+2018-06-15 16:24:39 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:24:39 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:24:39 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:24:39 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:24:39 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:24:39 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:24:39 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:24:39 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:24:39 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:24:39 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:25:46 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:25:46 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:25:58 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:25:58 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:30:58 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:30:58 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:30:58 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:30:58 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:30:58 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:30:58 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:32:22 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:32:22 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:32:22 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:32:22 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:32:22 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:32:22 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:32:22 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:32:22 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:32:22 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:32:22 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:40:32 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:40:32 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:42:02 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:42:02 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:42:11 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:42:11 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:42:19 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:42:19 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:43:04 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:43:04 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:44:04 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:44:04 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:44:04 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:44:04 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:44:04 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:44:04 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:44:04 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:44:04 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省
+2018-06-15 16:44:04 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 公众证件—居民身份证
+2018-06-15 16:44:04 ERROR [main] com.payegis.tools.util.ColumnValueEtl.etl(83) - there is no this etl method: default to etl value: 吉林省

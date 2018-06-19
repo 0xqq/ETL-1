@@ -1,0 +1,161 @@
+package com.payegis.czl.service;
+
+import com.payegis.czl.model.Path;
+import net.sf.json.JSONObject;
+import org.apache.http.HttpEntity;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
+import org.apache.log4j.Logger;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.*;
+
+/**
+ * Created by admin on 2018/3/21.
+ */
+public class HttpRequest {
+    private static Logger logger = Logger.getLogger(HttpRequest.class);
+
+    public static String sendPost(String url, Map<String, String> params) throws IOException {
+        String str = "";
+        try {
+            CloseableHttpClient httpclient = HttpClients.createDefault();
+            HttpPost httppost = new HttpPost(url);
+            List<NameValuePair> list = getNameValuePairArr(params);
+            UrlEncodedFormEntity entity = new UrlEncodedFormEntity(list, "UTF-8");
+            httppost.setEntity(entity);
+            CloseableHttpResponse response;
+            try {
+                response = httpclient.execute(httppost);
+                HttpEntity httpentity = response.getEntity();
+                if (httpentity != null) {
+                    str = EntityUtils.toString(httpentity, "UTF-8");
+                }
+            } catch (ClientProtocolException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return str;
+    }
+
+    private static List<NameValuePair> getNameValuePairArr(
+            Map<String, String> parasMap) {
+        List<NameValuePair> nvps = new ArrayList<NameValuePair>();
+        for (Map.Entry<String, String> parasEntry : parasMap.entrySet()) {
+            String parasName = parasEntry.getKey();
+            String parasValue = parasEntry.getValue();
+            nvps.add(new BasicNameValuePair(parasName, parasValue));
+        }
+        return nvps;
+    }
+
+    /**
+     * @Description: 请求多付通
+     * @Param: [params, appId, appKey, url]
+     * @return: net.sf.json.JSONObject
+     * @Author: CHEN ZUOLI
+     * @Date: 2018/3/22
+     * @Time: 10:51
+     */
+    public static JSONObject post(Map<String, String> params, String appId, String appKey, String url) {
+        JSONObject json = new JSONObject();
+        for (int i = 0; i < 1; i++) {
+            try {
+                CloseableHttpClient httpclient = HttpClients.createDefault();
+                String requestTimeString = String.valueOf(System.currentTimeMillis());
+                HttpPost httppost = new HttpPost(url);
+                httppost.setHeader("x-hmac-auth-date", requestTimeString);
+                httppost.setHeader("x-hmac-auth-signature", Sig.getSigNewMap(appKey, requestTimeString, params, appId));
+                params.remove("x-hmac-auth-date");
+                List<NameValuePair> list = new ArrayList<>();
+                Iterator<?> iterator = params.entrySet().iterator();
+                while (iterator.hasNext()) {
+                    Map.Entry<String, String> elem = (Map.Entry<String, String>) iterator.next();
+                    list.add(new BasicNameValuePair(elem.getKey(), elem.getValue()));
+                }
+                UrlEncodedFormEntity entity = new UrlEncodedFormEntity(list, "UTF-8");
+                httppost.setEntity(entity);
+                CloseableHttpResponse response;
+                String str = "";
+                try {
+                    response = httpclient.execute(httppost);
+                    HttpEntity httpentity = response.getEntity();
+                    if (httpentity != null) {
+                        str = EntityUtils.toString(httpentity, "UTF-8");
+                        json.put("result", str);
+                    }
+                } catch (ClientProtocolException e) {
+                    json.put("success", false);
+                    json.put("returnMsg", " 请求失败");
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    json.put("success", false);
+                    json.put("returnMsg", "请求失败");
+                    e.printStackTrace();
+                }
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+        }
+        return json;
+    }
+
+    public static String post(HashMap<String, String> paramMap, String url) {
+        String requestTime = String.valueOf(System.currentTimeMillis());
+        JSONObject headerJson = new JSONObject();
+        headerJson.put("groupId", Path.groupId);
+        headerJson.put("groupKey", Path.groupKey);
+        headerJson.put("requestTime", requestTime); // 查询时间
+        JSONObject conditionJson = new JSONObject();
+        for (Map.Entry<String, String> param : paramMap.entrySet()) {
+            conditionJson.put(param.getKey(), param.getValue());
+        }
+        JSONObject allJson = new JSONObject();
+        allJson.put("header", headerJson);
+        allJson.put("condition", conditionJson);
+        String data = allJson.toString();
+        String returnStr = null;
+        try {
+            byte[] encrData = AESCoder.encrypt(data.getBytes(), Path.encryptkey);
+            String signature = RSACoder.sign(encrData, Path.privateKey);
+            Map<String, String> params = new HashMap<>();
+            params.put("contents", Coder.encryptBASE64(encrData));
+            params.put("groupId", Path.groupId);
+            params.put("signature", signature);
+            String resultStr = HttpRequest.sendPost(url, params);
+            JSONObject jsonResult = JSONObject.fromObject(resultStr);
+            String sign = jsonResult.optString("signature");
+            String datas = jsonResult.optString("contents");
+            boolean isTrue = RSACoder.verify(Coder.decryptBASE64(datas), Path.publicKey, sign);
+            if (isTrue) {
+                returnStr = new String(AESCoder.decrypt(Coder.decryptBASE64(datas), Path.encryptkey));
+                String serialNum = jsonResult.optString("serialNum");
+                if (serialNum != null && !"".equals(serialNum.trim())) {
+                    logger.info(serialNum + "---" + returnStr); // 调用成功获取序列号及返回结果
+                } else {
+                    logger.error("调用失败：" + returnStr); // 调用失败，根据返回码判断是签名，参数等问题
+                }
+            } else {
+                logger.error("验签失败!");
+            }
+        } catch (Exception e) {
+            logger.error("请求获取结果失败：" + e);
+        }
+        return returnStr;
+    }
+
+}

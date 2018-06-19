@@ -1,0 +1,92 @@
+package com.payegis.tools.util;
+
+import com.payegis.tools.datetime.DateTimeUtils;
+import com.payegis.tools.encrypt.Base64;
+import com.payegis.tools.encrypt.MD5Utils;
+import com.payegis.tools.encrypt.ShaUtils;
+import com.payegis.tools.personal.IdCardUtils;
+import com.payegis.tools.personal.NameUtils;
+import com.payegis.tools.personal.PhoneUtils;
+import com.payegis.tools.string.NumberUtils;
+import com.payegis.tools.string.StringUtils;
+import org.apache.log4j.Logger;
+
+/**
+ * company: 北京通付盾数据科技有限公司
+ * user: chenzuoli
+ * date: 2018/6/15
+ * time: 9:53
+ * description: 对列值进行不同方式的清洗，包括但不限于日期、数值、字符、字符串、姓名、身份证号、手机号等
+ */
+public class ColumnValueEtl {
+    private static Logger logger = Logger.getLogger(ColumnValueEtl.class);
+
+    /**
+     * description: 按照默认的清洗方法对value进行清洗
+     * 1.如果为json格式，遍历每个字段的value，为字符串null，则转为空字符串；
+     * 2.如果不为json格式，且等于字符串null，那么转为空字符串；
+     * 3.全角字母和数字转为半角
+     * param: [value]
+     * return: java.lang.String
+     * date: 2018/6/15
+     * time: 13:38
+     */
+    public static String defauleEtl(String value) {
+        String returnValue = value;
+        try {
+            returnValue = StringUtils.etlJsonStr(value);
+        } catch (Exception e) {
+            logger.error("etl value " + value + " with default method exception!", e);
+        }
+        return returnValue;
+    }
+
+    /**
+     * description: 按照指定的清洗方法对value进行清洗
+     * param: [value, etlMethod]
+     * return: java.lang.String
+     * date: 2018/6/15
+     * time: 13:26
+     */
+    public static String etl(String value, String etlMethod) {
+        if (value == null) return null;
+        String returnValue = value;
+        try {
+            if ("".equals(etlMethod)){
+                return returnValue;
+            } else if ("name".equals(etlMethod)) {
+                returnValue = NameUtils.etlName(value);
+            } else if ("phone".equals(etlMethod)) {
+                returnValue = PhoneUtils.etlPhone(value);
+            } else if ("idCard".equals(etlMethod)) {
+                returnValue = IdCardUtils.etlIdCard(value);
+            } else if ("dateTime".equals(etlMethod)) {
+                returnValue = DateTimeUtils.dateStr2DateStr(value);
+            } else if ("int".equals(etlMethod)) {
+                returnValue = NumberUtils.transformFloatStrToIntStr(value);
+            } else if ("float".equals(etlMethod)) {
+                returnValue = NumberUtils.transformNumberToDouble(value);
+            } else if ("money".equals(etlMethod)) {
+                returnValue = NumberUtils.moneyEtl(value);
+            } else if ("md5_16".equals(etlMethod)) {
+                returnValue = MD5Utils.strToMd5_16(value);
+            } else if ("md5_32".equals(etlMethod)) {
+                returnValue = MD5Utils.strToMd5_32(value);
+            } else if ("sha256".equals(etlMethod)) {
+                returnValue = ShaUtils.SHA256(value);
+            } else if ("sha512".equals(etlMethod)) {
+                returnValue = ShaUtils.SHA512(value);
+            } else if ("base64_encrypt".equals(etlMethod)) {
+                returnValue = Base64.encodeBase64(value.getBytes());
+            } else if ("base64_decrypt".equals(etlMethod)) {
+                returnValue = new String(Base64.decryptBase64(value));
+            } else {
+                logger.error("there is no this etl method: " + etlMethod + " to etl value: " + value);
+            }
+        } catch (Exception e) {
+            logger.error("etl value " + value + " with etl method " + etlMethod + " exception!", e);
+        }
+        return returnValue;
+    }
+
+}
