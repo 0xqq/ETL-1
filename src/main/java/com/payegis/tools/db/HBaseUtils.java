@@ -15,24 +15,21 @@ import org.apache.hadoop.hbase.io.compress.Compression;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.log4j.Logger;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.*;
 
 /**
  * Company: 北京通付盾数据科技有限公司
  * User: 陈作立
- * Date: 2018/3/29
- * Time: 9:20
+ * Date: 2018/3/29 9:20
  * Description: Java操作HBase工具类
  * Ps: Java HBase
  */
-public class HBaseUtils {
+public class HBaseUtils implements Serializable{
     public static Configuration conf;
     public static Connection connection;
     public static Admin admin;
+    public static Properties props;
     private static Logger logger = Logger.getLogger(HBaseUtils.class);
 
     /**
@@ -45,9 +42,10 @@ public class HBaseUtils {
     public static HBaseUtils getInstance(String profilePath){
         try {
             ExternalPropertyUtils instance = ExternalPropertyUtils.getInstance(profilePath);
+            props = instance.props;
             conf = HBaseConfiguration.create();
-            conf.set("hbase.zookeeper.property.clientPort", instance.props.getProperty("zookeeperPort"));
-            conf.set("hbase.zookeeper.quorum", instance.props.getProperty("zookeeperHost"));
+            conf.set("hbase.zookeeper.property.clientPort", props.getProperty("zookeeperPort"));
+            conf.set("hbase.zookeeper.quorum", props.getProperty("zookeeperHost"));
             connection = ConnectionFactory.createConnection(conf);
             admin = connection.getAdmin();
             logger.info("初始化hbase连接成功!");

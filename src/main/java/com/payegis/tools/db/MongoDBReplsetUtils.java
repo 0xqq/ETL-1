@@ -4,17 +4,20 @@ import com.mongodb.*;
 import com.mongodb.client.MongoDatabase;
 import com.payegis.tools.util.ExternalPropertyUtils;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 /**
- * Description: MongoDB操作工具类
+ * Description: MongoDB副本集操作工具类
  * Author: chenzuoli
  * Date: 2018/3/13
  * Time: 9:36
  */
-public class MongoDBReplsetUtils {
-    private static MongoDBReplsetUtils mongoDBReplsetUtils = null;
+public class MongoDBReplsetUtils implements Serializable{
+    private static MongoDBReplsetUtils mongoDBReplsetUtils;
+    public Properties props;
     public MongoDatabase mongoDatabase;
     private ServerAddress seed1;
     private ServerAddress seed2;
@@ -25,16 +28,17 @@ public class MongoDBReplsetUtils {
 
     private MongoDBReplsetUtils(String profilePath) {
         ExternalPropertyUtils propertyUtil = ExternalPropertyUtils.getInstance(profilePath);
-        String mongodbport1 = propertyUtil.props.getProperty("mongodbport1");
+        props = propertyUtil.props;
+        String mongodbport1 = props.getProperty("mongodbport1");
         int port1 = mongodbport1.matches("\\d+") ? Integer.parseInt(mongodbport1) : 27017;
-        String mongodbport2 = propertyUtil.props.getProperty("mongodbport2");
+        String mongodbport2 = props.getProperty("mongodbport2");
         int port2 = mongodbport1.matches("\\d+") ? Integer.parseInt(mongodbport2) : 27017;
-        seed1 = new ServerAddress(propertyUtil.props.getProperty("mongodbhost1"), port1);
-        seed2 = new ServerAddress(propertyUtil.props.getProperty("mongodbhost2"), port2);
-        username = propertyUtil.props.getProperty("username");
-        password = propertyUtil.props.getProperty("password");
-        replSetName = propertyUtil.props.getProperty("replsetname");
-        default_db = propertyUtil.props.getProperty("certificatedb");
+        seed1 = new ServerAddress(props.getProperty("mongodbhost1"), port1);
+        seed2 = new ServerAddress(props.getProperty("mongodbhost2"), port2);
+        username = props.getProperty("username");
+        password = props.getProperty("password");
+        replSetName = props.getProperty("replsetname");
+        default_db = props.getProperty("certificatedb");
         mongoDatabase = createMongoDBClient().getDatabase(propertyUtil.props.getProperty("datadb"));
     }
 

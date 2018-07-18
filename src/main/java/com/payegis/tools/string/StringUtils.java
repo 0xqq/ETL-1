@@ -1,8 +1,6 @@
 package com.payegis.tools.string;
 
 import com.payegis.tools.encrypt.MD5Utils;
-import com.payegis.tools.personal.IdCardUtils;
-import com.payegis.tools.personal.NameUtils;
 import com.payegis.tools.util.RegexUtils;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
@@ -29,7 +27,7 @@ public class StringUtils {
      */
     public static void init(String[] args, int length, String msg) {
         if (args.length != length) {
-            logger.info(msg);
+            System.out.println(msg);
             System.exit(-1);
         }
     }
@@ -43,7 +41,7 @@ public class StringUtils {
      */
     public static boolean checkValidJsonObjectStr(String jsonStr) {
         boolean flag = false;
-        if (jsonStr == null || "null".equals(jsonStr)){
+        if (jsonStr == null || "null".equals(jsonStr)) {
             return false;
         }
         try {
@@ -198,7 +196,7 @@ public class StringUtils {
      * Time: 17:01
      */
     public static void replaceJsonKey(JSONObject jsonObject, String oriKey, String desKey) {
-        if (jsonObject == null) return ;
+        if (jsonObject == null) return;
         try {
             if (jsonObject.containsKey(oriKey)) {
                 String oriValue = jsonObject.optString(oriKey);
@@ -490,36 +488,6 @@ public class StringUtils {
             logger.error(key + " get camel named exception!", e);
         }
         return sb.toString();
-    }
-
-    /**
-     * description: list分页
-     * param: [source, n]
-     * return: java.util.List<java.util.List<T>>
-     * date: 2018/5/15
-     * time: 19:04
-     */
-    public static <T> List<List<T>> averageAssign(List<T> source, int n) {
-        List<List<T>> result = new ArrayList<>();
-        try {
-            int remaider = source.size() % n;  // 先计算出余数
-            int number = source.size() / n;  // 然后是商
-            int offset = 0; // 偏移量
-            for (int i = 0; i < n; i++) {
-                List<T> value;
-                if (remaider > 0) {
-                    value = source.subList(i * number + offset, (i + 1) * number + offset + 1);
-                    remaider--;
-                    offset++;
-                } else {
-                    value = source.subList(i * number + offset, (i + 1) * number + offset);
-                }
-                result.add(value);
-            }
-        } catch (Exception e) {
-            logger.error("split list to " + n + " partitions exception!", e);
-        }
-        return result;
     }
 
 }

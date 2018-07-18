@@ -227,7 +227,12 @@ public class ExcelUtils {
             if (result.get(i) != null) {
                 for (int j = 0; j < result.get(i).size(); j++) {
                     HSSFCell cell = row.createCell(j);
-                    cell.setCellValue(result.get(i).get(j).toString());
+                    Object cellObj = result.get(i).get(j);
+                    if (cellObj == null) {
+                        cell.setCellValue("");
+                    } else {
+                        cell.setCellValue(cellObj.toString());
+                    }
                 }
             }
         }
@@ -239,9 +244,8 @@ public class ExcelUtils {
         }
         byte[] content = os.toByteArray();
         File file = new File(path);//Excel文件生成后存储的位置。
-        OutputStream fos = null;
         try {
-            fos = new FileOutputStream(file);
+            OutputStream fos = new FileOutputStream(file);
             fos.write(content);
             os.close();
             fos.close();

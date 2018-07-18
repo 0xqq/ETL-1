@@ -5,6 +5,7 @@ import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -70,8 +71,7 @@ public class DateTimeUtils {
      * description: dateStr中可能包含不需要的内容，抽取日期时间字符串，并格式化成规整的字符串，年月日一律用横杠分隔，时分秒一律用冒号分隔
      * param: [dateStr]
      * return: java.lang.String
-     * date: 2018/6/7
-     * time: 14:04
+     * date: 2018/6/7 14:04
      */
     public static String dateStr2DateStr(String dateStr) {
         String returnStr = dateStr;
@@ -88,13 +88,11 @@ public class DateTimeUtils {
     }
 
     /**
-     * Description: 检验日期字符串合法性，日期格式正则表达式不全，可补充
-     * Param: [dateStr]
+     * description: 检验日期字符串合法性，日期格式正则表达式不全，可补充
+     * param: [dateStr]
      * return: java.util.Date
-     * Author: CHEN ZUOLI
-     * Date: 2018/4/11
-     * Time: 11:42
-     * Ps: 当日期类型字符串格式正确，但是数值不合法（秒的值达到66）时，会抛异常
+     * date: 2018/4/11 11:42
+     * ps: 当日期类型字符串格式正确，但是数值不合法（秒的值达到66）时，会抛异常
      */
     public static Date parseStringToDate(String dateStr) {
         if (dateStr == null || "".equals(dateStr.trim()))
@@ -163,8 +161,7 @@ public class DateTimeUtils {
      * description: 用正则去匹配字符串中可能包含的日期并进行相应的格式化，年月日以横杠-分隔，日分秒毫秒以冒号:分隔
      * param: [str]
      * return: java.lang.String
-     * date: 2018/6/7
-     * time: 11:50
+     * date: 2018/6/7 11:50
      */
     public static String getDateStrFromStr(String str) {
         if (str == null) return null;
@@ -312,8 +309,7 @@ public class DateTimeUtils {
      * description: 获取日期字符串格式
      * param: [dateStr]
      * return: java.text.SimpleDateFormat
-     * date: 2018/6/7
-     * time: 14:15
+     * date: 2018/6/7 14:15
      */
     public static SimpleDateFormat getDateFormat(String dateStr) {
         if (dateStr == null) return null;
@@ -379,8 +375,7 @@ public class DateTimeUtils {
      * description: 获取日期字符串格式，年月日全部转换为横杠，时分秒全部转换为冒号
      * param: [dateStr]
      * return: java.text.SimpleDateFormat
-     * date: 2018/6/7
-     * time: 14:31
+     * date: 2018/6/7 14:31
      */
     public static SimpleDateFormat getDateFormat2(String dateStr) {
         if (dateStr == null) return null;
@@ -446,9 +441,7 @@ public class DateTimeUtils {
      * description: 将日期类型的字符串转换为yyyy-MM-dd HH:mm:ss格式类型字符串，不合法则置为空字符串
      * param: [dateStr]
      * return: java.lang.String
-     * author: chenzuoli
-     * date: 2018/5/4
-     * time: 10:25
+     * date: 2018/5/4 10:25
      */
     public static String dateStrToyMdHms(String dateStr) {
         String returnStr = "";
@@ -465,9 +458,7 @@ public class DateTimeUtils {
      * description: 将日期类型的字符串转换为yyyy-MM-dd格式类型字符串
      * param: [dateStr]
      * return: java.lang.String
-     * author: chenzuoli
-     * date: 2018/5/4
-     * time: 10:52
+     * date: 2018/5/4 10:52
      */
     public static String dateStrToyMd(String dateStr) {
         String returnStr = "";
@@ -484,9 +475,7 @@ public class DateTimeUtils {
      * description: 日期比较，取最近值，若两值无法比较，取空字符串，有一值无法比较，取另一值
      * param: [dateS1, dateS2]
      * return: java.lang.String
-     * author: chenzuoli
-     * date: 2018/5/8
-     * time: 11:04
+     * date: 2018/5/8 11:04
      */
     public static String getMaxTime(String dateS1, String dateS2) {
         String maxTime = "";
@@ -511,12 +500,10 @@ public class DateTimeUtils {
     }
 
     /**
-     * Description: 比较两个日期，time1大于等于time2返回true，否则返回false
-     * Param: [time1, time2]
+     * description: 比较两个日期，time1大于等于time2返回true，否则返回false
+     * param: [time1, time2]
      * return: boolean
-     * Author: CHEN ZUOLI
-     * Date: 2018/4/23
-     * Time: 13:02
+     * date: 2018/4/23 13:02
      */
     public static boolean compareTime(String time1, String time2) {
         boolean flag = false;
@@ -541,12 +528,10 @@ public class DateTimeUtils {
     }
 
     /**
-     * Description: yyyy-MM-dd HH:mm:ss格式的日期字符串转换为sql Date
-     * Param: [str]
+     * description: yyyy-MM-dd HH:mm:ss格式的日期字符串转换为sql Date
+     * param: [str]
      * return: java.sql.Date
-     * Author: CHEN ZUOLI
-     * Date: 2018/3/30
-     * Time: 16:53
+     * date: 2018/3/30 16:53
      */
     public static java.sql.Date strToSqlDate(String str) {
         java.sql.Date returnDate = null;
@@ -560,12 +545,10 @@ public class DateTimeUtils {
     }
 
     /**
-     * Description: 日期value的格式统一，将yyyyMMdd格式日期转换为yyyy-MM-dd，同理其他类型日期
-     * Param: [jsonObject, key]
+     * description: 日期value的格式统一，将yyyyMMdd格式日期转换为yyyy-MM-dd，同理其他类型日期
+     * param: [jsonObject, key]
      * return: java.lang.String
-     * Author: CHEN ZUOLI
-     * Date: 2018/3/30
-     * Time: 18:22
+     * date: 2018/3/30 18:22
      */
     public static void dateTransform(JSONObject jsonObject, String key) {
         if (jsonObject == null) return;
@@ -589,9 +572,7 @@ public class DateTimeUtils {
      * description: java.sql.Timestamp或者java.util.Date转换为yyyy-MM-dd HH:mm:ss格式字符串
      * param: [date]
      * return: java.lang.String
-     * author: chenzuoli
-     * date: 2018/5/8
-     * time: 15:26
+     * date: 2018/5/8 15:26
      */
     public static String timestampToDateStr(java.util.Date date) {
         String returnStr = "";
@@ -604,12 +585,10 @@ public class DateTimeUtils {
     }
 
     /**
-     * Description: 获取当前时间，返回yyyy-MM-dd HH:mm:ss格式字符串
-     * Param: []
+     * description: 获取当前时间，返回yyyy-MM-dd HH:mm:ss格式字符串
+     * param: []
      * return: java.lang.String
-     * Author: CHEN ZUOLI
-     * Date: 2018/4/4
-     * Time: 12:03
+     * date: 2018/4/4 12:03
      */
     public static String currentTimeStr() {
         String format = null;
@@ -625,8 +604,7 @@ public class DateTimeUtils {
      * description: 获取当前日期yyyy-MM-dd格式字符串
      * param: []
      * return: java.lang.String
-     * date: 2018/5/18
-     * time: 14:32
+     * date: 2018/5/18 14:32
      */
     public static String currentDateStr() {
         String format = null;
@@ -636,6 +614,58 @@ public class DateTimeUtils {
             logger.error("format current date time exception!", e);
         }
         return format;
+    }
+
+    /**
+     * description: 根据年月日计算年龄,birthTimeString:"1994-11-14"
+     * param: [birthTimeString]
+     * return: int
+     * time: 2018/7/18 13:14
+     */
+    public static int getAgeFromDateStr(String birthTimeString) {
+        // 先截取到字符串中的年、月、日
+        String strs[] = birthTimeString.trim().split("-");
+        int selectYear = Integer.parseInt(strs[0]);
+        int selectMonth = Integer.parseInt(strs[1]);
+        int selectDay = Integer.parseInt(strs[2]);
+        // 得到当前时间的年、月、日
+        Calendar cal = Calendar.getInstance();
+        int yearNow = cal.get(Calendar.YEAR);
+        int monthNow = cal.get(Calendar.MONTH) + 1;
+        int dayNow = cal.get(Calendar.DATE);
+
+        // 用当前年月日减去生日年月日
+        int yearMinus = yearNow - selectYear;
+        int monthMinus = monthNow - selectMonth;
+        int dayMinus = dayNow - selectDay;
+
+        int age = yearMinus;// 先大致赋值
+        if (yearMinus < 0) {// 选了未来的年份
+            age = 0;
+        } else if (yearMinus == 0) {// 同年的，要么为1，要么为0
+            if (monthMinus < 0) {// 选了未来的月份
+                age = 0;
+            } else if (monthMinus == 0) {// 同月份的
+                if (dayMinus < 0) {// 选了未来的日期
+                    age = 0;
+                } else if (dayMinus >= 0) {
+                    age = 1;
+                }
+            } else if (monthMinus > 0) {
+                age = 1;
+            }
+        } else if (yearMinus > 0) {
+            if (monthMinus < 0) {// 当前月>生日月
+            } else if (monthMinus == 0) {// 同月份的，再根据日期计算年龄
+                if (dayMinus < 0) {
+                } else if (dayMinus >= 0) {
+                    age = age + 1;
+                }
+            } else if (monthMinus > 0) {
+                age = age + 1;
+            }
+        }
+        return age;
     }
 
 }

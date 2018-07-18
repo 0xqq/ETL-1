@@ -8,8 +8,10 @@ import com.mongodb.client.MongoDatabase;
 import com.payegis.tools.util.ExternalPropertyUtils;
 import org.apache.log4j.Logger;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 /**
  * company: 北京通付盾数据科技有限公司
@@ -18,25 +20,26 @@ import java.util.List;
  * time: 10:35
  * description: 连接mongodb工具类，通过传入配置文件获得MongoDatabase
  */
-public class MongoDBUtils {
+public class MongoDBUtils implements Serializable{
     private static Logger logger = Logger.getLogger(MongoDBUtils.class);
-    private static ExternalPropertyUtils propertyUtil;
+    public static Properties props;
     private static MongoClient client;
     public static MongoDatabase db;
 
     private MongoDBUtils(String filePath) {
         try {
-            propertyUtil = ExternalPropertyUtils.getInstance(filePath);
-            String host = propertyUtil.props.getProperty("host");
-            String portStr = propertyUtil.props.getProperty("port");
+            ExternalPropertyUtils propertyUtil = ExternalPropertyUtils.getInstance(filePath);
+            props = propertyUtil.props;
+            String host = props.getProperty("host");
+            String portStr = props.getProperty("port");
             int port = 27017;
             if (portStr.matches("\\d+")) {
                 port = Integer.parseInt(portStr);
             }
-            String username = propertyUtil.props.getProperty("username");
-            String password = propertyUtil.props.getProperty("password");
-            String authDb = propertyUtil.props.getProperty("authDb");
-            String dbName = propertyUtil.props.getProperty("db");
+            String username = props.getProperty("username");
+            String password = props.getProperty("password");
+            String authDb = props.getProperty("authDb");
+            String dbName = props.getProperty("db");
             ServerAddress seed = new ServerAddress(host, port);
             createMongoDBClient(seed, username, authDb, password);
             db = client.getDatabase(dbName);

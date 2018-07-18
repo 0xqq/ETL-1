@@ -1,41 +1,4 @@
-2018-06-19 09:46:14 INFO  [main] com.payegis.tools.string.StringUtils.init(32) - please enter two file path: 1.profile path;
-2.data file path.
-2018-06-19 09:48:18 INFO  [main] com.payegis.tools.util.ExternalPropertyUtils.readProperties(36) - load property file D:\pp\conf\filedelimiter.properties start!
-2018-06-19 09:48:18 INFO  [main] com.payegis.tools.util.ExternalPropertyUtils.readProperties(41) - load property file success!
-2018-06-19 09:48:45 INFO  [main] com.payegis.tools.util.ExternalPropertyUtils.readProperties(36) - load property file D:\pp\conf\filedelimiter.properties start!
-2018-06-19 09:48:45 INFO  [main] com.payegis.tools.util.ExternalPropertyUtils.readProperties(41) - load property file success!
-2018-06-19 09:51:41 INFO  [main] com.payegis.tools.util.ExternalPropertyUtils.readProperties(36) - load property file D:\pp\conf\filedelimiter.properties start!
-2018-06-19 09:51:41 INFO  [main] com.payegis.tools.util.ExternalPropertyUtils.readProperties(41) - load property file success!
-2018-06-19 11:49:39 INFO  [main] com.payegis.tools.string.StringUtils.init(32) - please enter two file path: 1.delimiter db file path;
-2.data file path!
-2018-06-19 11:52:24 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(89) - save delimiter   to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:04:33 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(89) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:11:14 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(89) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:14:14 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(89) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:15:18 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(93) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:16:02 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(93) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:22:49 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(93) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:27:54 INFO  [main] com.payegis.tools.personal.PhoneUtils.phoneInit(89) - 手机号运营商匹配项初始化!
-2018-06-19 13:27:54 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(94) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:28:10 INFO  [main] com.payegis.tools.personal.PhoneUtils.phoneInit(89) - 手机号运营商匹配项初始化!
-2018-06-19 13:28:10 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(94) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:35:20 INFO  [main] com.payegis.tools.personal.PhoneUtils.phoneInit(89) - 手机号运营商匹配项初始化!
-2018-06-19 13:35:47 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(94) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:42:01 INFO  [main] com.payegis.tools.personal.PhoneUtils.phoneInit(89) - 手机号运营商匹配项初始化!
-2018-06-19 13:42:01 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(94) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:42:53 INFO  [main] com.payegis.tools.personal.PhoneUtils.phoneInit(89) - 手机号运营商匹配项初始化!
-2018-06-19 13:42:53 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(94) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:43:26 INFO  [main] com.payegis.tools.personal.PhoneUtils.phoneInit(89) - 手机号运营商匹配项初始化!
-2018-06-19 13:43:26 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(94) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:44:25 INFO  [main] com.payegis.tools.personal.PhoneUtils.phoneInit(89) - 手机号运营商匹配项初始化!
-2018-06-19 13:44:25 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(94) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:45:20 INFO  [main] com.payegis.tools.personal.PhoneUtils.phoneInit(89) - 手机号运营商匹配项初始化!
-2018-06-19 13:48:54 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(94) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:49:08 INFO  [main] com.payegis.tools.personal.PhoneUtils.phoneInit(89) - 手机号运营商匹配项初始化!
-2018-06-19 13:51:35 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(94) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:52:17 INFO  [main] com.payegis.tools.personal.PhoneUtils.phoneInit(89) - 手机号运营商匹配项初始化!
-2018-06-19 13:55:50 INFO  [main] com.payegis.tools.personal.PhoneUtils.phoneInit(89) - 手机号运营商匹配项初始化!
-2018-06-19 13:55:50 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(94) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:56:45 INFO  [main] com.payegis.tools.personal.PhoneUtils.phoneInit(89) - 手机号运营商匹配项初始化!
-2018-06-19 13:56:45 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(94) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
-2018-06-19 13:57:12 INFO  [main] com.payegis.tools.file.FileDivisionETL.saveDelimiter(94) - save delimiter $ to file d:\pp\conf\delimiterdb.txt!
+2018-06-29 14:55:14 INFO  [main] com.payegis.tools.algorithm.SortUtils.selectSort(27) - before select sort: [I@7006c658
+2018-06-29 14:55:14 INFO  [main] com.payegis.tools.algorithm.SortUtils.selectSort(37) - after select sort: [I@7006c658
+2018-06-29 14:55:47 INFO  [main] com.payegis.tools.algorithm.SortUtils.selectSort(29) - before select sort: [[I@7006c658]
+2018-06-29 14:55:47 INFO  [main] com.payegis.tools.algorithm.SortUtils.selectSort(39) - after select sort: [[I@7006c658]

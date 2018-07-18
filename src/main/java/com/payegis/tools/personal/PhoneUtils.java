@@ -9,8 +9,7 @@ import java.util.HashMap;
 /**
  * Company: 北京通付盾数据科技有限公司
  * User: chenzuoli
- * Date: 2018/4/23
- * Time: 14:29
+ * Date: 2018/4/23 14:29
  * Description: 手机号工具类
  */
 public class PhoneUtils {
@@ -30,8 +29,7 @@ public class PhoneUtils {
      * Description: 获取手机号运营商
      * Param: [phone]
      * Return: java.lang.String 1代表中国移动，2代表中国联通，3代表中国电信
-     * Date: 2018/4/23
-     * Time: 14:29
+     * Date: 2018/4/23 14:29
      */
     public static String getPhoneFrom(String phone) {
         String phoneFrom = "";
@@ -82,8 +80,7 @@ public class PhoneUtils {
      * Description: 手机号运营商匹配项初始化
      * Param: []
      * Return: void
-     * Date: 2018/4/23
-     * Time: 14:30
+     * Date: 2018/4/23 14:30
      */
     private static void phoneInit() {
         logger.info("手机号运营商匹配项初始化!");
@@ -112,8 +109,7 @@ public class PhoneUtils {
      * Description: 生成假手机号，运营商真实存在
      * Param: []
      * Return: String
-     * Date: 2018/4/23
-     * Time: 14:22
+     * Date: 2018/4/23 14:22
      */
     public static String getRandomPhone() {
         return PhoneUtils.phonePrefixs[(int) NumberUtils.getLessThanNum(PhoneUtils.phonePrefixs.length)] + NumberUtils.getRandomNum(8);
@@ -123,8 +119,7 @@ public class PhoneUtils {
      * Description: 指定运营商号段前缀，随机生成电话号码
      * Param: [mobilePrefix]
      * Return: java.lang.String
-     * Date: 2018/4/23
-     * Time: 19:22
+     * Date: 2018/4/23 19:22
      */
     public static String getRandomPhone(String mobilePrefix) {
         return mobilePrefix + NumberUtils.getRandomNum(8);
@@ -137,8 +132,7 @@ public class PhoneUtils {
      * 3.仅清洗移动手机号，其他固定电话手机号、平台手机号、国际手机号暂不处理，原样返回
      * param: [phone]
      * return: java.lang.String
-     * date: 2018/6/15
-     * time: 10:01
+     * date: 2018/6/15 10:01
      */
     public static String etlPhone(String phone) {
         if (phone == null) return null;

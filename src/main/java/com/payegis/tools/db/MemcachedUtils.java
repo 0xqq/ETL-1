@@ -3,12 +3,13 @@ package com.payegis.tools.db;
 import net.spy.memcached.MemcachedClient;
 import org.apache.log4j.Logger;
 
+import java.io.Serializable;
 import java.net.InetSocketAddress;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-public class MemcachedUtils {
+public class MemcachedUtils implements Serializable{
     private static Logger logger = Logger.getLogger(MemcachedUtils.class);
     private MemcachedClient memcachedClient = null;
 

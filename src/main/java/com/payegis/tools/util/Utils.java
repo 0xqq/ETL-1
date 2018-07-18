@@ -201,10 +201,10 @@ public class Utils {
      * Time: 11:56
      */
     public static String getIsHit(String flag) {
-        String isHit = "FALSE";
+        String isHit = "false";
         if (flag != null && flag.length() > 0) {
             if ("1".equals(flag)) {
-                isHit = "TRUE";
+                isHit = "true";
             }
         }
         return isHit;
@@ -398,13 +398,100 @@ public class Utils {
     }
 
     /**
+     * JsonObject中的时间比较，取出最近的一条多平台借贷结果
+     * <p>
+     * param list 包含有JsonObject的list
+     * return 最近的一个JsonObject
+     */
+    public static JSONObject getRecentMutiLoanJsonObject(ArrayList<JSONObject> list) {
+        JSONObject jsonObject = new JSONObject();
+        if (list.size() > 0) {
+            jsonObject = list.get(0);
+        }
+        if (list.size() > 1) {
+            for (int i = 1; i < list.size(); i++) {
+                JSONObject jsonObject1 = list.get(i);
+                jsonObject = getRecentMutiLoanTime(jsonObject, jsonObject1);
+            }
+        }
+        return jsonObject;
+    }
+
+    /**
+     * 金融黑名单结果中比较时间，取最近的结果
+     * <p>
+     * param timeJ1 时间1
+     * param timeJ2 时间2
+     * return 最近的时间的Json串，如果时间相等，那么去逾期金额大的那个
+     */
+    public static JSONObject getRecentMutiLoanTime(JSONObject timeJ1, JSONObject timeJ2) {
+        JSONObject recentTimeJ = new JSONObject();
+        try{
+            String time1 = timeJ1.optString("b");
+            String time2 = timeJ2.optString("b");
+            String range1 = timeJ1.optString("k");
+            String range2 = timeJ2.optString("k");
+            if ("".equals(range1) || "z".equals(range1)) {
+                range1 = " ";
+            }
+            if ("".equals(range2) || "z".equals(range2)) {
+                range2 = " ";
+            }
+            try {
+                java.util.Date date1 = DateTimeUtils.parseStringToDate(time1);
+                java.util.Date date2 = DateTimeUtils.parseStringToDate(time2);
+                if (date1 != null && date2 != null) {
+                    if (date1.getTime() > date2.getTime()) {
+                        recentTimeJ = timeJ1;
+                    } else if (date1.getTime() < date2.getTime()) {
+                        recentTimeJ = timeJ2;
+                    } else if (range1.charAt(0) >= range2.charAt(0)) {
+                        recentTimeJ = timeJ1;
+                    } else {
+                        recentTimeJ = timeJ2;
+                    }
+                } else if (date1 != null) {
+                    recentTimeJ = timeJ1;
+                } else if (date2 != null) {
+                    recentTimeJ = timeJ2;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } catch (Exception e){
+            logger.error("get recent time exception, one is " + timeJ1 + ", another is " + timeJ2, e);
+        }
+        return recentTimeJ;
+    }
+
+    /**
+     * JsonObject中的时间比较，取出最近的一条数据
+     * <p>
+     * param list 包含有JsonObject的list
+     * return 最近的一个JsonObject
+     */
+    public static JSONObject getRecentOverdueJsonObject(ArrayList<JSONObject> list) {
+        JSONObject jsonObject = new JSONObject();
+        if (list.size() > 0) {
+            jsonObject = list.get(0);
+        }
+        if (list.size() > 1) {
+            for (int i = 1; i < list.size(); i++) {
+                JSONObject jsonObject1 = list.get(i);
+                jsonObject = getRecentOverdueTime(jsonObject, jsonObject1);
+            }
+        }
+        return jsonObject;
+    }
+
+    /**
      * 比较时间，取最近的时间
      * <p>
      * param timeJ1 时间1，包含逾期金额
      * param timeJ2 时间2，包含逾期金额
      * return 最近的时间的Json串，如果时间相等，那么去逾期金额大的那个
      */
-    public static JSONObject getRecentTime(JSONObject timeJ1, JSONObject timeJ2) {
+    public static JSONObject getRecentOverdueTime(JSONObject timeJ1, JSONObject timeJ2) {
         JSONObject recentTimeJ = new JSONObject();
         try{
             String time1 = timeJ1.optString("g");
@@ -445,26 +532,6 @@ public class Utils {
             logger.error("get recent time exception, one is " + timeJ1 + ", another is " + timeJ2, e);
         }
         return recentTimeJ;
-    }
-
-    /**
-     * JsonObject中的时间比较，取出最近的一条数据
-     * <p>
-     * param list 包含有JsonObject的list
-     * return 最近的一个JsonObject
-     */
-    public static JSONObject getRecentJsonObject(ArrayList<JSONObject> list) {
-        JSONObject jsonObject = new JSONObject();
-        if (list.size() > 0) {
-            jsonObject = list.get(0);
-        }
-        if (list.size() > 1) {
-            for (int i = 1; i < list.size(); i++) {
-                JSONObject jsonObject1 = list.get(i);
-                jsonObject = getRecentTime(jsonObject, jsonObject1);
-            }
-        }
-        return jsonObject;
     }
 
     /**

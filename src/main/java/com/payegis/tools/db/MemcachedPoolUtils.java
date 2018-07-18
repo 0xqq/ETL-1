@@ -4,6 +4,8 @@ import com.whalin.MemCached.MemCachedClient;
 import com.whalin.MemCached.SockIOPool;
 import org.apache.log4j.Logger;
 
+import java.io.Serializable;
+
 /**
  * company: 北京通付盾数据科技有限公司
  * user: chenzuoli
@@ -11,7 +13,7 @@ import org.apache.log4j.Logger;
  * time: 18:42
  * description: memcached 连接池工具类
  */
-public class MemcachedPoolUtils {
+public class MemcachedPoolUtils implements Serializable{
     private static Logger logger = Logger.getLogger(MemcachedPoolUtils.class);
     private static MemCachedClient cachedClient;
 

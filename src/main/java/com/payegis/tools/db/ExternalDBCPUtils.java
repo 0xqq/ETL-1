@@ -13,21 +13,21 @@ import java.util.*;
 /**
  * Company: 北京通付盾数据科技有限公司
  * User: chenzuoli
- * Date: 2018/4/27
- * Time: 10:52
+ * Date: 2018/4/27 10:52
  * Description: 动态获取外部配置文件中的jdbc连接参数，加载数据库连接池工具类
  */
 public class ExternalDBCPUtils implements Serializable {
     private static Logger logger = Logger.getLogger(ExternalDBCPUtils.class);
     private static DataSource dataSource = null;
-    public ExternalPropertyUtils propertyUtil;
+    public Properties props;
 
     private ExternalDBCPUtils(String filePath) {
         if (dataSource == null) {
             logger.info("---------开始初始化数据库连接池---------");
             try {
-                propertyUtil = ExternalPropertyUtils.getInstance(filePath);
-                dataSource = BasicDataSourceFactory.createDataSource(propertyUtil.props);
+                ExternalPropertyUtils propertyUtil = ExternalPropertyUtils.getInstance(filePath);
+                props = propertyUtil.props;
+                dataSource = BasicDataSourceFactory.createDataSource(props);
                 logger.info("---------数据库连接池初始化完成---------");
             } catch (IOException e) {
                 logger.error("---------加载配置文件失败---------", e);
@@ -41,8 +41,7 @@ public class ExternalDBCPUtils implements Serializable {
      * description: 获取ExternalDBCPUtils类的实例，传递连接数据库的配置文件参数
      * param: [filePath]
      * return: com.payegis.tools.db.ExternalDBCPUtils
-     * date: 2018/6/13
-     * time: 14:21
+     * date: 2018/6/13 14:21
      */
     public static ExternalDBCPUtils getInstance(String filePath) {
         return new ExternalDBCPUtils(filePath);
@@ -52,15 +51,13 @@ public class ExternalDBCPUtils implements Serializable {
      * Description: 获取数据库连接
      * Param: []
      * Return: java.sql.Connection
-     * Author: chenzuoli
-     * Date: 2018/4/27
-     * Time: 10:57
+     * Date: 2018/4/27 10:57
      */
     public Connection getConnection() {
         Connection conn = null;
         try {
             conn = dataSource.getConnection();
-        } catch (SQLException e) {
+        } catch (Exception e) {
             logger.error("---------数据库连接池获取连接异常---------", e);
         }
         return conn;
@@ -70,15 +67,13 @@ public class ExternalDBCPUtils implements Serializable {
      * Description: 关闭数据库连接
      * Param: [connection]
      * Return: void
-     * Author: chenzuoli
-     * Date: 2018/4/27
-     * Time: 11:08
+     * Date: 2018/4/27 11:08
      */
     public void close(Connection connection) {
         if (connection != null) {
             try {
                 connection.close();
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 logger.error("---------关闭Connection异常---------", e);
             }
         }
@@ -88,16 +83,14 @@ public class ExternalDBCPUtils implements Serializable {
      * Description: 关闭数据库连接及会话
      * Param: [conn, stat]
      * Return: void
-     * Author: chenzuoli
-     * Date: 2018/4/27
-     * Time: 11:09
+     * Date: 2018/4/27 11:09
      */
     public void close(Connection conn, Statement stat) {
         try {
             if (stat != null) {
                 stat.close();
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
             logger.error("---------关闭Connection、Statement异常---------", e);
         } finally {
             close(conn);
@@ -108,16 +101,14 @@ public class ExternalDBCPUtils implements Serializable {
      * Description: 关闭数据库连接、会话、结果集
      * Param: [conn, stat, rs]
      * Return: void
-     * Author: chenzuoli
-     * Date: 2018/4/27
-     * Time: 11:10
+     * Date: 2018/4/27 11:10
      */
     public void close(Connection conn, Statement stat, ResultSet rs) {
         try {
             if (rs != null) {
                 rs.close();
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
             logger.error("---------关闭ResultSet异常---------", e);
         } finally {
             close(conn, stat);
@@ -128,9 +119,7 @@ public class ExternalDBCPUtils implements Serializable {
      * Description: 执行查询
      * Param: [sql, params]
      * Return: java.util.List<java.util.Map<java.lang.String,java.lang.Object>>
-     * Author: chenzuoli
-     * Date: 2018/4/27
-     * Time: 11:10
+     * Date: 2018/4/27 11:10
      */
     public List<Map<String, Object>> executeQuery(String sql, Object... params) {
         List<Map<String, Object>> rowDataList = new ArrayList<>();
@@ -144,7 +133,7 @@ public class ExternalDBCPUtils implements Serializable {
             setStatParams(stat, params);
             resultSet = stat.executeQuery();
             rowDataList = getResultList(resultSet);
-        } catch (SQLException e) {
+        } catch (Exception e) {
             logger.error("---------数据查询异常[" + sql + "]---------", e);
         } finally {
             close(conn, stat, resultSet);
@@ -156,9 +145,7 @@ public class ExternalDBCPUtils implements Serializable {
      * Description: 更新数据
      * Param: [sql, params]
      * Return: boolean
-     * Author: chenzuoli
-     * Date: 2018/4/27
-     * Time: 11:11
+     * Date: 2018/4/27 11:11
      */
     public boolean executeUpdate(String sql, Object... params) {
         boolean isUpdated = false;
@@ -172,10 +159,10 @@ public class ExternalDBCPUtils implements Serializable {
             int updatedNum = stat.executeUpdate();
             isUpdated = updatedNum == 1;
             conn.commit();
-        } catch (SQLException e) {
+        } catch (Exception e) {
             try {
                 conn.rollback();
-            } catch (SQLException e1) {
+            } catch (Exception e1) {
                 e1.printStackTrace();
             }
             logger.error("---------更新失败! sql:[" + sql + "], params:[" + Arrays.toString(params) + "]---------", e);
@@ -188,10 +175,8 @@ public class ExternalDBCPUtils implements Serializable {
     /**
      * Description: 批量更新
      * Param: [sql, paramList]
-     * return: boolean
-     * Author: CHEN ZUOLI
-     * Date: 2018/4/23
-     * Time: 13:36
+     * Return: boolean
+     * Date: 2018/4/23 13:36
      */
     public boolean executeBatch(String sql, List<String[]> paramList) {
         boolean isUpdated = false;
@@ -213,10 +198,10 @@ public class ExternalDBCPUtils implements Serializable {
             stat.executeBatch();
             conn.commit();
             isUpdated = true;
-        } catch (SQLException e) {
+        } catch (Exception e) {
             try {
                 conn.rollback();
-            } catch (SQLException e1) {
+            } catch (Exception e1) {
                 e1.printStackTrace();
             }
             logger.error("---------更新失败! sql:[" + sql + "], params:[" + paramList + "]---------", e);
@@ -230,9 +215,7 @@ public class ExternalDBCPUtils implements Serializable {
      * Description: 执行批处理
      * Param: [sqlList]
      * Return: boolean
-     * Author: chenzuoli
-     * Date: 2018/4/27
-     * Time: 11:11
+     * Date: 2018/4/27 11:11
      */
     public boolean executeBatch(List<String> sqlList) {
         if (sqlList == null || sqlList.isEmpty()) {
@@ -250,11 +233,11 @@ public class ExternalDBCPUtils implements Serializable {
             stat.executeBatch();
             conn.commit();
             return true;
-        } catch (SQLException e) {
+        } catch (Exception e) {
             try {
                 conn.rollback();
                 logger.error("---------批处理异常，执行回滚---------");
-            } catch (SQLException e1) {
+            } catch (Exception e1) {
                 logger.error("---------回滚异常---------", e1);
             }
             logger.error("---------执行批处理异常---------");
@@ -263,7 +246,7 @@ public class ExternalDBCPUtils implements Serializable {
                 if (conn != null) {
                     conn.setAutoCommit(true);
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 logger.error("---------设置自动提交异常---------", e);
             }
             close(conn, stat);
@@ -275,9 +258,7 @@ public class ExternalDBCPUtils implements Serializable {
      * Description: 获取列名及数据
      * Param: [rs]
      * Return: java.util.List<java.util.Map<java.lang.String,java.lang.Object>>
-     * Author: chenzuoli
-     * Date: 2018/4/27
-     * Time: 11:12
+     * Date: 2018/4/27 11:12
      */
     private List<Map<String, Object>> getResultList(ResultSet rs) throws SQLException {
         List<Map<String, Object>> rowDataList = new ArrayList<>();
@@ -298,9 +279,7 @@ public class ExternalDBCPUtils implements Serializable {
      * Description: 获取列名
      * Param: [rs]
      * Return: java.util.List<java.lang.String>
-     * Author: chenzuoli
-     * Date: 2018/4/27
-     * Time: 11:12
+     * Date: 2018/4/27 11:12
      */
     private List<String> getColumnName(ResultSet rs) throws SQLException {
         List<String> columnList = new ArrayList<>();
@@ -310,7 +289,7 @@ public class ExternalDBCPUtils implements Serializable {
             for (int i = 1; i <= columnCount; i++) {
                 columnList.add(metaData.getColumnName(i));
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
             logger.info("------获取表列表异常------", e);
             throw e;
         }
@@ -321,9 +300,7 @@ public class ExternalDBCPUtils implements Serializable {
      * Description: 为会话PreparedStatement设置参数
      * Param: [stat, params]
      * Return: void
-     * Author: chenzuoli
-     * Date: 2018/4/27
-     * Time: 11:13
+     * Date: 2018/4/27 11:13
      */
     private void setStatParams(PreparedStatement stat, Object... params) throws SQLException {
         if (stat != null && params != null) {
@@ -331,7 +308,7 @@ public class ExternalDBCPUtils implements Serializable {
                 for (int len = params.length, i = 1; i <= len; i++) {
                     stat.setObject(i, params[i - 1]);
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 logger.error("------设置sql参数异常---------");
                 throw e;
             }

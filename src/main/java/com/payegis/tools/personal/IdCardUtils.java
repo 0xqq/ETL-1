@@ -64,16 +64,14 @@ public class IdCardUtils {
         zoneNum.put(91, "外国");
     }
 
-    public static int[] PARITYBIT = {'1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2'};
-    public static int[] POWER_LIST = {7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2};
+    private static int[] PARITYBIT = {'1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2'};
+    private static int[] POWER_LIST = {7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2};
 
     /**
-     * Description: 身份证验证，null和"" 都是false
-     * Param: [idCard]
+     * description: 身份证验证，null和"" 都是false
+     * param: [idCard]
      * return: boolean
-     * Author: CHEN ZUOLI
-     * Date: 2018/4/23
-     * Time: 15:12
+     * date: 2018/4/23 15:12
      */
     public static boolean checkIDCard(String idCard) {
         if (idCard == null || (idCard.length() != 15 && idCard.length() != 18))
@@ -126,8 +124,7 @@ public class IdCardUtils {
      * description: 获取年份前缀
      * param: []
      * return: int
-     * date: 2018/6/13
-     * time: 15:36
+     * date: 2018/6/13 15:36
      */
     private static int getIdCardCalendar() {
         GregorianCalendar curDay = new GregorianCalendar();
@@ -139,9 +136,7 @@ public class IdCardUtils {
      * description: 清洗身份证号：小写x转大写X，不满足身份证号的不作处理
      * param: [idCard]
      * return: java.lang.String
-     * author: chenzuoli
-     * date: 2018/5/8
-     * time: 14:04
+     * date: 2018/5/8 14:04
      */
     public static String etlIdCard(String idCard) {
         String returnIdCard = idCard;
@@ -156,12 +151,10 @@ public class IdCardUtils {
     }
 
     /**
-     * Description: 随机生成18为身份证号，要求格式正确，并合法，但不一定存在该身份证号
-     * Param: []
+     * description: 随机生成18为身份证号，要求格式正确，并合法，但不一定存在该身份证号
+     * param: []
      * return: java.lang.String
-     * Author: CHEN ZUOLI
-     * Date: 2018/4/23
-     * Time: 15:32
+     * date: 2018/4/23 15:32
      */
     public static String getRandomIdCard() {
         StringBuilder idCard = new StringBuilder("");
@@ -198,6 +191,69 @@ public class IdCardUtils {
             logger.error("exception: " + e + ", get random id card exception!");
         }
         return idCard.toString();
+    }
+
+    /**
+     * description: 从身份证号中获取省份
+     * param: [idCard]
+     * return: java.lang.String
+     * time: 2018/7/18 10:58
+     */
+    public static String getProvince(String idCard) {
+        if (idCard == null || !idCard.matches(RegexUtils.idCardRegex)) return "";
+        return zoneNum.getOrDefault(Integer.parseInt(idCard.substring(0, 2)), "");
+    }
+
+    /**
+     * description: 从身份证号中获取出生年月日yyyy-MM-dd格式
+     * param: [idCard]
+     * return: java.lang.String
+     * time: 2018/7/18 10:59
+     */
+    public static String getBirthday(String idCard) {
+        if (idCard == null || !idCard.matches(RegexUtils.idCardRegex)) return "";
+        if (idCard.length() == 18) {
+            return DateTimeUtils.dateStr2DateStr(idCard.substring(6, 14));
+        } else {
+            return DateTimeUtils.dateStr2DateStr("19" + idCard.substring(6, 12));
+        }
+    }
+
+    /**
+     * description: 从身份证号中获取性别，1代表男性，0代表女性
+     * param: [idCard]
+     * return: java.lang.String
+     * time: 2018/7/18 11:21
+     */
+    public static String getGender(String idCard) {
+        if (idCard == null || !idCard.matches(RegexUtils.idCardRegex)) return "";
+        String gender = "";
+        String order = "";
+        if (idCard.length() == 18) {
+            order = idCard.substring(16, 17);
+        } else if (idCard.length() == 15) {
+            order = idCard.substring(14, 15);
+        }
+        if (order.length() > 0) {
+            if (Integer.parseInt(order) % 2 == 0) {
+                gender = "0";
+            } else {
+                gender = "1";
+            }
+        }
+        return gender;
+    }
+
+    /**
+     * description:
+     * param: [idCard]
+     * return: java.lang.String
+     * time: 2018/7/18 11:52
+     */
+    public static int getAge(String idCard) {
+        if (idCard == null || !idCard.matches(RegexUtils.idCardRegex)) return 0;
+        String birthday = getBirthday(idCard);
+        return DateTimeUtils.getAgeFromDateStr(birthday);
     }
 
 }

@@ -12,6 +12,8 @@ import org.apache.log4j.Logger;
 public class RegexUtils {
     private static Logger logger = Logger.getLogger(RegexUtils.class);
 
+    public final static String blankRegex = "\\s*|\t|\r|\n"; // 空白字符正则
+
     /**
      * 个人信息正则
      */

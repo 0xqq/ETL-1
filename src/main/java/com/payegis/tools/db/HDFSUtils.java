@@ -10,24 +10,23 @@ import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.net.URI;
 
 /**
  * company: 北京通付盾数据科技有限公司
  * user: chenzuoli
- * date: 2018/5/17
- * time: 13:04
+ * date: 2018/5/17 13:04
  * description: hdfs工具类
  */
-public class HDFSUtils {
+public class HDFSUtils implements Serializable{
     private static Logger logger = Logger.getLogger(HDFSUtils.class);
 
     /**
      * description: 创建新文件
      * param: [dst, contents]
      * return: void
-     * date: 2018/5/17
-     * time: 13:06
+     * date: 2018/5/17 13:06
      */
     public static void createFile(Configuration conf, String dst, byte[] contents) {
         logger.info("create file " + dst);
