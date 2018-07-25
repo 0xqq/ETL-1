@@ -1,0 +1,100 @@
+package com.payegis.tools.db;
+
+import com.mongodb.*;
+import com.mongodb.client.MongoDatabase;
+import com.payegis.tools.util.ExternalPropertyUtils;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
+
+/**
+ * Description: MongoDB副本集操作工具类
+ * Author: chenzuoli
+ * Date: 2018/3/13
+ * Time: 9:36
+ */
+public class MongoDBReplsetUtils implements Serializable{
+    private static MongoDBReplsetUtils mongoDBReplsetUtils;
+    public Properties props;
+    public MongoDatabase mongoDatabase;
+    private ServerAddress seed1;
+    private ServerAddress seed2;
+    private String username;
+    private String password;
+    private String replSetName;
+    private String default_db;
+
+    private MongoDBReplsetUtils(String profilePath) {
+        ExternalPropertyUtils propertyUtil = ExternalPropertyUtils.getInstance(profilePath);
+        props = propertyUtil.props;
+        String mongodbport1 = props.getProperty("mongodbport1");
+        int port1 = mongodbport1.matches("\\d+") ? Integer.parseInt(mongodbport1) : 27017;
+        String mongodbport2 = props.getProperty("mongodbport2");
+        int port2 = mongodbport1.matches("\\d+") ? Integer.parseInt(mongodbport2) : 27017;
+        seed1 = new ServerAddress(props.getProperty("mongodbhost1"), port1);
+        seed2 = new ServerAddress(props.getProperty("mongodbhost2"), port2);
+        username = props.getProperty("username");
+        password = props.getProperty("password");
+        replSetName = props.getProperty("replsetname");
+        default_db = props.getProperty("certificatedb");
+        mongoDatabase = createMongoDBClient().getDatabase(propertyUtil.props.getProperty("datadb"));
+    }
+
+    /**
+     * description: 获取连接mongodb副本集工具类实例，传递连接mongodb数据库参数配置文件
+     * param: [profilePath]
+     * return: com.payegis.tools.db.MongoDBReplsetUtils
+     * date: 2018/6/13
+     * time: 15:14
+     */
+    public static synchronized MongoDBReplsetUtils getInstance(String profilePath) {
+        if (mongoDBReplsetUtils == null) {
+            mongoDBReplsetUtils = new MongoDBReplsetUtils(profilePath);
+        }
+        return mongoDBReplsetUtils;
+    }
+
+    /**
+     * description: 创建mongodb client对象
+     * param: []
+     * return: com.mongodb.MongoClient
+     * date: 2018/6/13
+     * time: 15:15
+     */
+    private MongoClient createMongoDBClient() {
+        // 构建Seed列表
+        List<ServerAddress> seedList = new ArrayList<>();
+        seedList.add(seed1);
+        seedList.add(seed2);
+        // 构建鉴权信息
+        List<MongoCredential> credentials = new ArrayList<>();
+        credentials.add(MongoCredential.createScramSha1Credential(username,
+                default_db, password.toCharArray()));
+
+        // 构建操作选项，requiredReplicaSetName属性外的选项根据自己的实际需求配置，默认参数满足大多数场景
+        MongoClientOptions options = MongoClientOptions.builder()
+                .requiredReplicaSetName(replSetName).socketTimeout(2000)
+                .connectionsPerHost(1).build();
+        return new MongoClient(seedList, credentials, options);
+    }
+
+    /**
+     * description: 创建mongodb client对象
+     * param: []
+     * return: com.mongodb.MongoClient
+     * date: 2018/6/13
+     * time: 15:15
+     */
+    private MongoClient createMongoDBClientWithURI() {
+        //另一种通过URI初始化
+        //mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
+        MongoClientURI connectionString = new MongoClientURI("mongodb://" + username + ":" + password + "@" +
+                seed1 + "," + seed2 + "/" +
+                default_db +
+                "?replicaSet=" + replSetName);
+        return new MongoClient(connectionString);
+    }
+
+}

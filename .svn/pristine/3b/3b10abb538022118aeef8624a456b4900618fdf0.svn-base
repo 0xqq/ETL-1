@@ -1,0 +1,523 @@
+package com.payegis.tools.string;
+
+import com.payegis.tools.encrypt.MD5Utils;
+import com.payegis.tools.util.RegexUtils;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+import org.apache.log4j.Logger;
+
+import java.util.*;
+
+/**
+ * Company: 北京通付盾数据科技有限公司
+ * User: 陈作立
+ * Date: 2018/4/10
+ * Time: 10:24
+ * Description: 检验合法日期
+ */
+public class StringUtils {
+    private static Logger logger = Logger.getLogger(StringUtils.class);
+
+    /**
+     * Description: 初始化输入参数，如果未输入参数，那么退出程序
+     * Param: [args, length, msg]
+     * Return: void
+     * Date: 2018/4/2
+     * Time: 11:01
+     */
+    public static void init(String[] args, int length, String msg) {
+        if (args.length != length) {
+            System.out.println(msg);
+            System.exit(-1);
+        }
+    }
+
+    /**
+     * Description: 检验字符串是否为jsonObject结构
+     * Param: [jsonStr]
+     * Return: boolean
+     * Date: 2018/4/11
+     * Time: 11:53
+     */
+    public static boolean checkValidJsonObjectStr(String jsonStr) {
+        boolean flag = false;
+        if (jsonStr == null || "null".equals(jsonStr)) {
+            return false;
+        }
+        try {
+            JSONObject.fromObject(jsonStr);
+            flag = true;
+        } catch (Exception e) {
+//            logger.info("illegal json string: " + jsonStr);
+        }
+        return flag;
+    }
+
+    /**
+     * Description: 检验字符串是否为jsonArray结构
+     * Param: [jsonStr]
+     * Return: boolean
+     * Date: 2018/4/17
+     * Time: 10:27
+     */
+    public static boolean checkValidJsonArrayStr(String jsonStr) {
+        boolean flag = false;
+        try {
+            JSONArray.fromObject(jsonStr);
+            flag = true;
+        } catch (Exception e) {
+//            logger.info("illegal json string: " + jsonStr);
+        }
+        return flag;
+    }
+
+    /**
+     * Description: 如果字符串中包含有反斜杠、单引号、双引号字符时，为他们添加转义字符\
+     * Param: [str]
+     * Return: java.lang.String
+     * Date: 2018/4/11
+     * Time: 11:58
+     */
+    public static String addEscape(String str) {
+        str = str.replaceAll("\\\\", "\\\\\\\\")
+                .replaceAll("\"", "\\\\\"")
+                .replaceAll("'", "\\\\'");
+        return str;
+    }
+
+    /**
+     * Description: 将JSONObject中最里层的value改为String类型
+     * Param: [jsonObject]
+     * Return: net.sf.json.JSONObject
+     * Date: 2018/3/19
+     * Time: 17:25
+     */
+    public static JSONObject transformValue(String jsonObject) {
+        JSONObject returnJsonObject = null;
+        try {
+            JSONObject first = JSONObject.fromObject(jsonObject);
+            returnJsonObject = valueToStringValue(first);
+        } catch (Exception e) {
+            logger.error("transform json object " + jsonObject + "value to string exception!", e);
+        }
+        return returnJsonObject;
+    }
+
+    /**
+     * description: 将JSONObject中的的所有value都转换成string类型
+     * param: [jsonObject]
+     * return: net.sf.json.JSONObject
+     * date: 2018/6/13
+     * time: 15:43
+     */
+    public static JSONObject valueToStringValue(JSONObject jsonObject) {
+        Iterator<String> keys = jsonObject.keys();
+        while (keys.hasNext()) {
+            String key = keys.next();
+            String value = jsonObject.optString(key).trim();
+            try {
+                if (value.indexOf("{") == 0) {
+                    JSONObject second = JSONObject.fromObject(value);
+                    jsonObject.put(key, valueToStringValue(second));
+                } else if (value.indexOf("[") == 0) {
+                    JSONArray jsonArray = JSONArray.fromObject(value);
+                    JSONArray transformJsonArray = new JSONArray();
+                    for (int i = 0; i < jsonArray.size(); i++) {
+                        JSONObject second = jsonArray.optJSONObject(i);
+                        JSONObject transSecond = valueToStringValue(second);
+                        transformJsonArray.add(transSecond);
+                    }
+                    jsonObject.put(key, transformJsonArray);
+                } else {
+                    jsonObject.put(key, value);
+                }
+            } catch (Exception e) {
+                jsonObject.put(key, value);
+            }
+        }
+        return jsonObject;
+    }
+
+    /**
+     * Description: 根据key的小写md5取最后一位字符的ASCII码，码对10取模加1得到扩大value值的倍数，扩大value值
+     * Param: [key, value]
+     * Return: java.lang.String
+     * Date: 2018/3/13
+     * Time: 10:22
+     */
+    public static String expandValueByKey(String key, String value) {
+        String returnValue = value;
+        try {
+            String md5 = MD5Utils.strToMd5_32(key).toLowerCase();
+            int multiple = ((int) md5.charAt(md5.length() - 1)) % 10 + 1;
+            if (value == null || value.length() == 0) {
+                return returnValue;
+            } else if (value.matches(RegexUtils.floatRegex)) {
+                returnValue = String.valueOf(Float.parseFloat(value) * multiple);
+            } else if (value.matches(RegexUtils.intRegex)) {
+                returnValue = String.valueOf(Integer.parseInt(value) * multiple);
+            }
+        } catch (Exception e) {
+            logger.error("key is " + key + ", value is " + value + ", expand value exception!", e);
+        }
+        return returnValue;
+    }
+
+    /**
+     * Description: 根据key的小写md5取最后一位字符的ASCII码，码对10取模加1得到缩小value值的倍数，缩小value值
+     * Param: [key, value]
+     * Return: java.lang.String
+     * Date: 2018/3/13
+     * Time: 10:23
+     */
+    public static String reduceValueByKey(String key, String value) {
+        String returnValue = "";
+        try {
+            String md5 = MD5Utils.strToMd5_32(key).toLowerCase();
+            int multiple = ((int) md5.charAt(md5.length() - 1)) % 10 + 1;
+            if (value == null || value.length() == 0) {
+                return returnValue;
+            } else if (value.matches(RegexUtils.floatRegex)) {
+                returnValue = String.valueOf(Float.parseFloat(value) / multiple);
+            } else if (value.matches(RegexUtils.intRegex)) {
+                returnValue = String.valueOf(Integer.parseInt(value) / multiple);
+            }
+        } catch (Exception e) {
+            logger.error("key is " + key + ", value is " + value + ", reduce value exception!", e);
+        }
+        return returnValue;
+    }
+
+    /**
+     * Description: 替换JSONObject中第一层的oriKey为desKey
+     * Param: [jsonObject, oriKey, desKey]
+     * Return: net.sf.json.JSONObject
+     * Date: 2018/3/30
+     * Time: 17:01
+     */
+    public static void replaceJsonKey(JSONObject jsonObject, String oriKey, String desKey) {
+        if (jsonObject == null) return;
+        try {
+            if (jsonObject.containsKey(oriKey)) {
+                String oriValue = jsonObject.optString(oriKey);
+                jsonObject.put(desKey, "null".equals(oriValue) ? "" : oriValue);
+                if (!oriKey.equals(desKey)) { // key相同的话，就不移除
+                    jsonObject.remove(oriKey);
+                }
+            }
+        } catch (Exception e) {
+            logger.error("exception: " + e + ", 替换JSONObject中第一层的key失败：" + jsonObject + ", " + oriKey + ", " + desKey, e);
+        }
+    }
+
+    /**
+     * description: 替换map中的某个key为指定的key，如果key不相同，则删除原来的key
+     * param: [map, oriKey, desKey]
+     * return: java.util.Map<java.lang.String , java.lang.Object>
+     * date: 2018/4/26
+     * time: 17:30
+     */
+    public static void replaceMapKey(Map<String, Object> map, String oriKey, String desKey) {
+        try {
+            if (map.containsKey(oriKey)) {
+                Object value = map.get(oriKey);
+                map.put(desKey, "null".equals(value) ? "" : value);
+                if (!oriKey.equals(desKey)) { // key相同的话，就不移除
+                    map.remove(oriKey);
+                }
+            }
+        } catch (Exception e) {
+            logger.error("替换map中的key失败：" + map + ", " + oriKey + ", " + desKey, e);
+        }
+    }
+
+    /**
+     * Description: 移除map中value为null的key，不改变原map，返回新的map
+     * Param: [map]
+     * Return: java.util.Map<java.lang.String , java.lang.Object>
+     * Date: 2018/4/4
+     * Time: 17:36
+     */
+    public static Map<String, Object> removeNullValueOfMap(Map<String, Object> map) {
+        HashMap<String, Object> returnMap = new HashMap<>();
+        for (Map.Entry<String, Object> entry : map.entrySet()) {
+            String key = entry.getKey();
+            Object value = entry.getValue();
+            if (value != null) {
+                returnMap.put(key, value);
+            }
+        }
+        return returnMap;
+    }
+
+    /**
+     * 获取json多层嵌套中某一层中某个key的value值
+     * <p>
+     * param level   层级
+     * param json    json
+     * param someKey 需要获取的key
+     * return key的值
+     * 注意：该json中无jsonArray数组结构，且所有字段名称不能重复
+     */
+    public static String getKeyOfJson(int level, JSONObject json, String someKey) {
+        String someValue = null;
+        try {
+            if (level >= 1) {
+                for (int i = 1; i <= level; i++) {
+                    if (i == level) {
+                        someValue = json.getString(someKey);
+                        return someValue;
+                    }
+                    String[] strings = iterateJson(json);
+                    for (int j = 0; j < strings.length; j++) {
+                        try {
+                            JSONObject jsonObject = JSONObject.fromObject(strings[j]);
+                            someValue = getKeyOfJson(level - 1, jsonObject, someKey);
+                            return someValue;
+                        } catch (Exception e) {
+
+                        }
+                    }
+                }
+            }
+        } catch (Exception e) {
+            logger.error(json + "中第" + level + "层无tid！", e);
+        }
+        return someValue;
+    }
+
+    /**
+     * 取出JsonObject中字段的所有value，以String数组的形式返回
+     * <p>
+     * param jsonObject
+     * return
+     */
+    public static String[] iterateJson(JSONObject jsonObject) {
+        ArrayList<String> list = new ArrayList<>();
+        if (jsonObject != null) {
+            Iterator keys = jsonObject.keys();
+            try {
+                while (keys.hasNext()) {
+                    String key = keys.next().toString();
+                    String value = jsonObject.optString(key);
+                    list.add(value);
+                }
+            } catch (Exception e) {
+                logger.error("get json object " + jsonObject + " key's value exception!", e);
+            }
+        }
+        return list.toArray(new String[list.size()]);
+    }
+
+    /**
+     * Description: 清洗Json格式字符串，同样适用于非json字符串，清洗规则如下：
+     * 1.如果值为null，改为空字符串，如{"key":null}修改为{"key":""}
+     * 2.将全角的字母和数字转换成半角字母和数字
+     * Param: [jsonStr]
+     * Return: java.lang.String
+     * Date: 2018/4/10
+     * Time: 9:19
+     */
+    public static String etlJsonStr(String jsonStr) {
+        if (jsonStr == null) return null;
+        String returnStr = jsonStr;
+        try {
+            if (StringUtils.checkValidJsonObjectStr(jsonStr)) {
+                JSONObject returnJsonObject = JSONObject.fromObject(jsonStr);
+                etlJsonObject(returnJsonObject);
+                returnStr = returnJsonObject.toString();
+            } else if (StringUtils.checkValidJsonArrayStr(jsonStr)) {
+                JSONArray returnJsonArray = JSONArray.fromObject(jsonStr);
+                for (int i = 0; i < returnJsonArray.size(); i++) {
+                    returnJsonArray.add(i, etlJsonStr(returnJsonArray.optString(i)));
+                }
+                returnStr = returnJsonArray.toString();
+            } else {
+                returnStr = CharacterUtils.qj2bjCharNumber(jsonStr);
+            }
+            if ("null".equals(returnStr)) returnStr = "";
+        } catch (Exception e) {
+            logger.error("parse json string " + jsonStr + " exception!", e);
+        }
+        return returnStr;
+    }
+
+    /**
+     * description: 清洗Json格式字符串，清洗规则如下：
+     * 1.如果值为null，改为空字符串，如{"key":null}修改为{"key":""}
+     * 2.将全角的字母和数字转换成半角字母和数字
+     * param: [jsonObject]
+     * return: void
+     * date: 2018/6/7
+     * time: 16:02
+     */
+    public static void etlJsonObject(JSONObject jsonObject) {
+        Iterator<String> keys = jsonObject.keys();
+        while (keys.hasNext()) {
+            String key = CharacterUtils.qj2bjCharNumber(keys.next());
+            String value = CharacterUtils.qj2bjCharNumber(jsonObject.optString(key));
+            if ("null".equals(value)) {
+                value = "";
+                jsonObject.put(key, value);
+            } else if (StringUtils.checkValidJsonObjectStr(value)) {
+                jsonObject.put(key, etlJsonStr(value));
+            } else if (StringUtils.checkValidJsonArrayStr(value)) {
+                JSONArray jsonArray = JSONArray.fromObject(value);
+                for (int i = 0; i < jsonArray.size(); i++) {
+                    jsonArray.set(i, etlJsonStr(jsonArray.optString(i)));
+                }
+                jsonObject.put(key, jsonArray);
+            } else {
+                jsonObject.put(key, value);
+            }
+        }
+    }
+
+    /**
+     * Description: 取出JSONObject中的所有kv，返回一个map
+     * Param: [jsonObject]
+     * Return: java.util.HashMap<java.lang.String , java.lang.String>
+     * Date: 2018/4/17
+     * Time: 10:17
+     */
+    public static HashMap<String, String> iterateJsonMap(JSONObject jsonObject) {
+        HashMap<String, String> returnMap = new HashMap<>();
+        if (jsonObject != null) {
+            Iterator keys = jsonObject.keys();
+            try {
+                while (keys.hasNext()) {
+                    String key = keys.next().toString();
+                    String value = jsonObject.optString(key);
+                    returnMap.put(key, value.equals("null") ? "" : value);
+                }
+            } catch (Exception e) {
+                logger.error("json object" + jsonObject + " to hash map exception!", e);
+            }
+        }
+        return returnMap;
+    }
+
+    /**
+     * Description: 从JSONObject中获取需要的字段
+     * Param: [jsonObject, params]
+     * Return: net.sf.json.JSONObject
+     * Date: 2018/4/19
+     * Time: 11:30
+     */
+    public static JSONObject getNeedColumn(JSONObject jsonObject, String... params) {
+        JSONObject newJsonObject = new JSONObject();
+        for (String columnName : params) {
+            newJsonObject.put(columnName, jsonObject.optString(columnName));
+        }
+        return newJsonObject;
+    }
+
+    /**
+     * description: 将json类型字符串中的key全部转换为驼峰命名：第一个单词首字母小写，后面的单词首字母大写
+     * param: [jsonStr]
+     * return: java.lang.String
+     * date: 2018/5/3
+     * time: 16:12
+     */
+    public static String jsonStrKeyCamelNamed(String jsonStr) {
+        String returnStr;
+        JSONObject returnJson = new JSONObject();
+        try {
+            if (StringUtils.checkValidJsonObjectStr(jsonStr)) {
+                JSONObject jsonObject = JSONObject.fromObject(jsonStr);
+                Iterator<String> keys = jsonObject.keys();
+                while (keys.hasNext()) {
+                    String key = keys.next();
+                    String value = jsonObject.optString(key);
+                    String camelNamedKey = camelNamed(key);
+                    if (StringUtils.checkValidJsonObjectStr(value)) {
+                        String s = jsonStrKeyCamelNamed(value);
+                        returnJson.put(camelNamedKey, s);
+                    } else if (StringUtils.checkValidJsonArrayStr(value)) {
+                        JSONArray jsonArray = JSONArray.fromObject(value);
+                        for (int i = 0; i < jsonArray.size(); i++) {
+                            String s = jsonStrKeyCamelNamed(jsonArray.optString(i));
+                            jsonArray.set(i, s);
+                        }
+                        returnJson.put(camelNamedKey, jsonArray);
+                    } else {
+                        returnJson.put(camelNamedKey, value);
+                    }
+                }
+                returnStr = returnJson.toString();
+            } else if (StringUtils.checkValidJsonArrayStr(jsonStr)) {
+                JSONArray jsonArray = JSONArray.fromObject(jsonStr);
+                for (int i = 0; i < jsonArray.size(); i++) {
+                    JSONObject jsonObject = JSONObject.fromObject(jsonArray.optString(i));
+                    String s = jsonStrKeyCamelNamed(jsonObject.toString());
+                    jsonArray.set(i, s);
+                }
+                returnStr = jsonArray.toString();
+            } else {
+                returnStr = jsonStr;
+            }
+        } catch (Exception e) {
+            logger.error(jsonStr + ", json string key camel named exception!", e);
+            returnStr = jsonStr;
+        }
+        return returnStr;
+    }
+
+    /**
+     * description: 将下划线的命名法改为驼峰命名法
+     * param: [key]
+     * return: java.lang.String
+     * date: 2018/5/3
+     * time: 15:18
+     */
+    public static String camelNamed(String key) {
+        StringBuilder sb = new StringBuilder("");
+        try {
+            if (key != null && key.contains("_")) {
+                String[] splits = key.split("_");
+                sb.append(splits[0].substring(0, 1).toLowerCase());
+                sb.append(splits[0].substring(1));
+                for (int i = 1; i < splits.length; i++) {
+                    sb.append(splits[i].substring(0, 1).toUpperCase());
+                    sb.append(splits[i].substring(1));
+                }
+            } else {
+                return key;
+            }
+        } catch (Exception e) {
+            logger.error(key + " get camel named exception!", e);
+        }
+        return sb.toString();
+    }
+
+    /**
+     * description: list分页
+     * param: [source, n]
+     * return: java.util.List<java.util.List<T>>
+     * date: 2018/5/15
+     * time: 19:04
+     */
+    public static <T> List<List<T>> averageAssignList(List<T> source, int n) {
+        List<List<T>> result = new ArrayList<>();
+        try {
+            int remaider = source.size() % n;  // 先计算出余数
+            int number = source.size() / n;  // 然后是商
+            int offset = 0; // 偏移量
+            for (int i = 0; i < n; i++) {
+                List<T> value;
+                if (remaider > 0) {
+                    value = source.subList(i * number + offset, (i + 1) * number + offset + 1);
+                    remaider--;
+                    offset++;
+                } else {
+                    value = source.subList(i * number + offset, (i + 1) * number + offset);
+                }
+                result.add(value);
+            }
+        } catch (Exception e) {
+            logger.error("split list to " + n + " partitions exception!", e);
+        }
+        return result;
+    }
+
+}

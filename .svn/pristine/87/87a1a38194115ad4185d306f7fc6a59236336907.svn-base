@@ -1,0 +1,172 @@
+package com.payegis.tools.algorithm;
+
+import org.apache.log4j.Logger;
+
+import java.util.Arrays;
+
+/**
+ * company: 北京通付盾数据科技有限公司
+ * user: chenzuoli
+ * date: 2018/6/29 14:43
+ * description: 排序算法：冒泡排序、选择排序、插入排序、快速排序、希尔排序、堆排序、归并排序、基数排序
+ */
+public class Sort {
+    private static Logger logger = Logger.getLogger(Sort.class);
+
+    public static void main(String[] args) {
+        int[] sort = new int[]{1, 4, 2, 22, 55, 66, 3, 44, -1};
+        int[] sort1 = new int[]{2, 9, 3, 11};
+//        selectSort(sort);
+//        bubblingSort(sort);
+//        insertSort(sort);
+        int[] ints = mergeTwoArray(sort, sort1);
+        System.out.println(Arrays.toString(ints));
+        int[] ints1 = mergeSort(sort);
+        System.out.println(Arrays.toString(ints1));
+    }
+
+    /**
+     * description: 选择排序
+     * param: [sort]
+     * return: int[]
+     * time: 2018/6/29 14:54
+     */
+    private static int[] selectSort(int[] sort) {
+        System.out.println("before select sort!");
+        System.out.println(Arrays.toString(sort));
+        for (int i = 0; i < sort.length - 1; i++) {
+            for (int j = i + 1; j < sort.length; j++) {
+                if (sort[i] < sort[j]) {
+                    int temp = sort[i];
+                    sort[i] = sort[j];
+                    sort[j] = temp;
+                }
+            }
+        }
+        System.out.println("after select sort!");
+        System.out.println(Arrays.toString(sort));
+        return sort;
+    }
+
+    /**
+     * description: 冒泡排序
+     * param: [sort]
+     * return: int[]
+     * time: 2018/6/29 15:03
+     */
+    private static int[] bubblingSort(int[] sort) {
+        System.out.println("before bubble sort!");
+        System.out.println(Arrays.toString(sort));
+        for (int i = 0; i < sort.length - 1; i++) {
+            for (int j = 0; j < sort.length - i - 1; j++) {
+                if (sort[j] > sort[j + 1]) {
+                    int temp = sort[j];
+                    sort[j] = sort[j + 1];
+                    sort[j + 1] = temp;
+                }
+            }
+        }
+        System.out.println("after bubbling sort!");
+        System.out.println(Arrays.toString(sort));
+        return sort;
+    }
+
+    /**
+     * description: 插入排序
+     * param: [sort]
+     * return: int[]
+     * time: 2018/6/29 15:23
+     */
+    private static int[] insertSort(int[] sort) {
+        System.out.println("before insert sort!");
+        System.out.println(Arrays.toString(sort));
+        for (int i = 0; i < sort.length - 1; i++) {
+            for (int j = i + 1; j > 0; j--) {
+                if (sort[j] >= sort[j - 1]) {
+                    break;
+                } else {
+                    int temp = sort[j];
+                    sort[j] = sort[j - 1];
+                    sort[j - 1] = temp;
+                }
+            }
+        }
+        System.out.println("after insert sort!");
+        System.out.println(Arrays.toString(sort));
+        return sort;
+    }
+
+    /**
+     * description: 希尔排序
+     * param: [sort]
+     * return: int[]
+     * time: 2018/6/29 17:13
+     */
+    private static int[] shellSort(int[] sort) {
+        System.out.println("before shell sort!");
+        System.out.println(Arrays.toString(sort));
+
+        System.out.println("after shell sort!");
+        System.out.println(Arrays.toString(sort));
+        return sort;
+    }
+
+    /**
+     * description: 堆排序
+     * param: [sort]
+     * return: int[]
+     * time: 2018/6/29 17:51
+     */
+    private static int[] heapSort(int[] sort) {
+        System.out.println("before heap sort!");
+        System.out.println(Arrays.toString(sort));
+
+        System.out.println("after heap sort!");
+        System.out.println(Arrays.toString(sort));
+        return sort;
+    }
+
+    /**
+     * 归并排序（递归）
+     * <p>
+     * ①. 将序列每相邻两个数字进行归并操作，形成 floor(n/2)个序列，排序后每个序列包含两个元素；
+     * ②. 将上述序列再次归并，形成 floor(n/4)个序列，每个序列包含四个元素；
+     * ③. 重复步骤②，直到所有元素排序完毕。
+     *
+     * @param arr 待排序数组
+     */
+    private static int[] mergeSort(int[] arr) {
+        if (arr.length <= 1) return arr;
+        int num = arr.length >> 1; // 与除以2功能相同
+        int[] leftArr = Arrays.copyOfRange(arr, 0, num);
+        int[] rightArr = Arrays.copyOfRange(arr, num, arr.length);
+        System.out.println("split two array: " + Arrays.toString(leftArr) + " And " + Arrays.toString(rightArr));
+        return mergeTwoArray(mergeSort(leftArr), mergeSort(rightArr));      //不断拆分为最小单元，再排序合并
+    }
+
+    /**
+     * description: 将俩数组合并为一个数组，做归并排序
+     * param: [arr1, arr2]
+     * return: int[]
+     * time: 2018/6/30 11:17
+     */
+    private static int[] mergeTwoArray(int[] arr1, int[] arr2) {
+        int[] resultArr = new int[arr1.length + arr2.length];
+        int i = 0, j = 0, k = 0;
+        while (i < arr1.length && j < arr2.length) { // 将两个数组中的较小值放入新的数组中
+            if (arr1[i] <= arr2[j]) {
+                resultArr[k++] = arr1[i++];
+            } else {
+                resultArr[k++] = arr2[j++];
+            }
+        }
+        while (i < arr1.length) { // arr1中多余的元素放入新数组中
+            resultArr[k++] = arr1[i++];
+        }
+        while (j < arr2.length) { // arr2中多余的元素放入新数组中
+            resultArr[k++] = arr2[j++];
+        }
+        return resultArr;
+    }
+
+}
